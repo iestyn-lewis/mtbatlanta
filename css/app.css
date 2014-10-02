@@ -35,4 +35,6 @@ body {
     line-height: 1.35;
     /*overflow: hidden;
     white-space: nowrap;*/
+    width: 280px; 
+    font-family: 'Lato','Helvetica Neue',Helvetica,Arial,sans-serif;
 }
