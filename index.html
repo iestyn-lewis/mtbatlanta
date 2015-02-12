@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!doctype html>
 <html style="width: 100%; height: 100%">
@@ -7,8 +8,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1, user-scalable=no">
 
     <title>MTBAtlanta.com - Mountain Biking Destinations in Atlanta, GA</title>
-    <meta name="keywords" content="{{ pkg.keywords.join(',') }}">
-    <meta name="description" content="{{ pkg.description }}">
+    <meta name="keywords" content="atlanta,mountain,bike,mtb,biking">
+    <meta name="description" content="Mountain Biking Destinations Around Atlanta">
     <link href="img/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" />
 <link href="img/icon-hires.png" rel="icon" sizes="192x192" />
 
@@ -75,12 +76,172 @@
       var shops = $("#togShops").is(":checked");
       
     var locations = [
-      {% for site in sites %}
-          ['{{ site.name }}', {{ site.lat }}, {{ site.long }}, '{{ site.side }}', '{{ site.address }}', 
-          '{{ site.web }}', '{{ site.id }}', {{ site.mileage }}, '{{site.abbr}}', '{{ site.far }}',
-          '{{ site.closed }}', '{{ site.color }}']
-          {% if !loop.last %},{% endif %}
-      {% endfor %}
+      
+          ['Allatoona Creek', 34.0214929, -84.72183139999999, 'W', '5690 Old Stilesboro Road, Acworth, GA 30101', 
+          'http://imba-westga.org/locations-of-interest/detail/2/1/allatoona-creek-main-trail-head', '5425cffdedc6f122d7000012', 19, 'ALL', 'N',
+          'N', '336600']
+          ,
+      
+          ['Big Creek Park', 34.0237013, -84.31229769999999, 'N', '1600 Old Alabama Rd, Roswell, GA 30076', 
+          'http://www.rambo-mtb.org/big-creek-park', '5425cfb6edc6f122d700000d', 7, 'BCK', 'N',
+          'N', '006600']
+          ,
+      
+          ['Blankets Creek', 34.161911, -84.53932900000001, 'N', '2261 Sixes Rd, Canton, GA 30114', 
+          'http://sorbawoodstock.org/trails/', '5425d014edc6f122d7000014', 16, 'BLK', 'N',
+          'N', '003366']
+          ,
+      
+          ['Boundary Waters Park', 33.6684443, -84.6661949, 'W', '5000 Highway 92/166, Douglasville, GA 30135', 
+          'http://imba-westga.org/locations-of-interest/detail/7/1/boundry-waters', '542de470cbba430000000002', 9, 'BWP', 'N',
+          'N', '663300']
+          ,
+      
+          ['Bull and Jake Mt', 34.582895, -84.144281, 'N', 'Bull Mountain Parking Lot, Dahlonega, GA 30533', 
+          'http://www.fs.usda.gov/recarea/conf/recreation/ohv/recarea/?recid=10537&amp;actid=104', '54d9419ed4c6a60c6435b450', 36, 'BUL', 'Y',
+          'N', '003366']
+          ,
+      
+          ['Central Park', 34.24584110000001, -84.10128470000001, 'N', '2300 Keith Bridge Rd, Cumming, GA 30041', 
+          'http://www.rambo-mtb.org/central-park', '5425cfcaedc6f122d700000e', 4, 'CEN', 'N',
+          'N', '006600']
+          ,
+      
+          ['Charleston Park', 34.239767, -84.04877599999998, 'N', '5850 Charleston Park Rd, Cumming, GA 30041', 
+          'http://www.rambo-mtb.org/charleston-park', '5425cf79edc6f122d700000b', 6, 'CHL', 'N',
+          'N', '000066']
+          ,
+      
+          ['Chicopee Woods', 34.2480654, -83.8390134, 'E', '2125 Elachee Drive, Gainesville, GA 30504', 
+          'http://gainesvillesorba.org', '5425cf54edc6f122d700000a', 21, 'CHI', 'N',
+          'N', '336600']
+          ,
+      
+          ['Clinton Nature Preserve', 33.706199, -84.86943099999996, 'W', '8720 Ephesus Church Road, Villa Rica, GA 30180', 
+          'http://imba-westga.org/locations-of-interest/detail/5/1/clinton-nature-preserve', '542de345cbba430000000001', 7, 'CNP', 'N',
+          'N', '660066']
+          ,
+      
+          ['Cochran Shoals/Sope Creek', 33.92185449999999, -84.43892210000001, 'N', '152 Columns Dr SE, Marietta, GA 30067', 
+          'http://www.sorbaatlanta.org/p/blog-page.html', '5425cff1edc6f122d7000011', 8, 'SOP', 'N',
+          'N', '660000']
+          ,
+      
+          ['Coldwater Mountain', 33.6083, -85.9265, 'W', '1661 Coldwater Road, Anniston, AL 36201', 
+          'http://www.neaba.net/coldwatermtb', '54d93470d4c6a60c6435b44c', 25, 'CLD', 'Y',
+          'N', '006666']
+          ,
+      
+          ['Conyers Horse Park', 33.6709958, -83.94033339999999, 'E', '1996 Centennial Olympic Pkwy, Conyers, GA 30013', 
+          'http://www.georgiahorsepark.com/Recreation/MountainBikingTrails/tabid/523/Default.aspx', '5425ce4cedc6f122d7000002', 8, 'CHP', 'N',
+          'N', '660000']
+          ,
+      
+          ['Dauset Trails', 33.2362429, -83.9442431, 'S', '360 Mt Vernon Church Rd, Jackson, GA 30233', 
+          'http://www.dausettrails.com/trails.htm', '5425ce2dedc6f122d7000001', 20, 'DAU', 'N',
+          'N', '330066']
+          ,
+      
+          ['Dupree Park', 34.1055736, -84.49544420000001, 'N', '513 Neese Road, Woodstock, GA 30188', 
+          'http://www.woodstockga.gov/index.aspx?NID=350', '542995d9bd64370000000001', 1, 'DUP', 'N',
+          'N', '660000']
+          ,
+      
+          ['FATS', 33.6144, -82.0814, 'E', 'Woodlawn Road, Clarks Hill, SC 29821, United States', 
+          'http://sorbacsra.org/Trails/FATS.htm', '54d93953d4c6a60c6435b44e', 37, 'FAT', 'Y',
+          'N', '006666']
+          ,
+      
+          ['Fort Yargo', 33.9848343, -83.73363460000002, 'E', '210 S. Broad Street, Winder, GA 30680', 
+          'http://gastateparks.org/FortYargo-HikingBiking', '5425cf0aedc6f122d7000007', 21, 'YAR', 'N',
+          'N', '330066']
+          ,
+      
+          ['George Pierce Park', 34.06022, -84.06199300000003, 'E', '55 Buford Highway, Suwanee, GA 30024', 
+          'http://www.gwinnettcounty.com/portal/gwinnett/Departments/CommunityServices/ParksandRecreation/OurParksandFacilities/GuidetoYourParks/GeorgePiercePark', '5425cf3eedc6f122d7000009', 4, 'GPP', 'N',
+          'N', '666600']
+          ,
+      
+          ['Harbins Park', 33.9101641, -83.85274479999998, 'E', '2995 Luke Edwards Road, Dacula, GA 30019', 
+          'http://www.gwinnettcounty.com/portal/gwinnett/Departments/CommunityServices/ParksandRecreation/OurParksandFacilities/GuidetoYourParks/HarbinsPark', '5425cefaedc6f122d7000006', 13, 'HAR', 'N',
+          'N', '660033']
+          ,
+      
+          ['Hard Labor Creek', 33.6259545, -83.6123935, 'E', '5 Labor Creek Road, Rutledge, GA 30663', 
+          'http://gastateparks.org/HardLaborCreek', '5425d039edc6f122d7000017', 10, 'HLC', 'N',
+          'N', '006600']
+          ,
+      
+          ['Hart Farms/Corry House', 33.6207721, -83.0727488, 'E', '53 Crawfordville Road, Union Point,GA', 
+          'http://www.hartcorrytrails.com/', '5425d047edc6f122d7000018', 21, 'HFM', 'Y',
+          'N', '663300']
+          ,
+      
+          ['Haw Creek Park', 34.1607744, -84.10606940000002, 'N', '2205 Echols Rd, Cumming, GA 30041', 
+          'http://www.rambo-mtb.org/haw-creek-park', '5425cfa9edc6f122d700000c', 3, 'HAW', 'N',
+          'N', '660033']
+          ,
+      
+          ['Heritage Park', 33.7593621, -83.43729969999998, 'E', '2543 Macon Hwy, Watkinsville, GA 30677', 
+          'http://www.oconeecounty.com/ocprd/index.php/oconee-parks-2/15-general/75-heritage-park', '5425d02cedc6f122d7000016', 10, 'HER', 'N',
+          'N', '003366']
+          ,
+      
+          ['Iron Hill Trail (Red Top Mtn)', 34.1546092, -84.70299119999999, 'W', '50 Lodge Rd SE, Cartersville, GA 30121', 
+          'http://trails.mtbr.com/cat/united-states-trails/trails-georgia/trail/iron-hill-trail/prd_368023_4541crx.aspx', '542dcc01b87b9ee238000001', 4, 'IHT', 'N',
+          'N', '666600']
+          ,
+      
+          ['Jackrabbit Mountain', 35.0112019, -83.77267189999998, 'N', 'Jackrabbit Campground, Hayesville, NC 28904', 
+          'http://sabacycling.com/jackrabbit.shtml', '5425cfe7edc6f122d7000010', 15, 'JAK', 'Y',
+          'Y', '006633']
+          ,
+      
+          ['Mt. Adams', 34.0702197, -84.25185979999998, 'N', '3655 Preston Ridge Rd, Alpharetta, GA 30005', 
+          'http://www.rambo-mtb.org/mt-adams', '5425cfd6edc6f122d700000f', 1, 'MTA', 'N',
+          'N', '663300']
+          ,
+      
+          ['Mt. Tabor MTB Park', 33.9436681, -84.77086029999998, 'W', '1550 E. Paulding Dr, Dallas, GA 30157', 
+          'http://imba-westga.org/locations-of-interest/detail/3/1/mt-tabor-mountain-bike-park', '5425d007edc6f122d7000013', 8, 'MTB', 'N',
+          'N', '000066']
+          ,
+      
+          ['Paynes Creek Park', 34.4667891, -82.96033090000003, 'E', '518 Ramp Road, Hartwell, GA 30643', 
+          'http://www.recreation.gov/campgroundDetails.do?contractCode=NRSO&amp;parkId=71344', '5425cf31edc6f122d7000008', 10, 'PAY', 'Y',
+          'Y', '006666']
+          ,
+      
+          ['Pinhoti/Mulberry Gap', 34.798536, -84.609671, 'N', 'Conasauga Rd., Ellijay, GA 30540', 
+          'http://mulberrygap.net/', '54d945a7d4c6a60c6435b452', 80, 'MUL', 'Y',
+          'N', '000066']
+          ,
+      
+          ['Rope Mill Park', 34.1240866, -84.52384, 'N', '690 Rope Mill Road, Woodstock, GA 30188', 
+          'http://sorbawoodstock.org/olde-rope-mill-park/', '5425d01fedc6f122d7000015', 9, 'ROP', 'N',
+          'N', '006633']
+          ,
+      
+          ['Silver Comet Side Trail', 33.881785, -84.75484340000003, 'W', 'Seaboard Ave, Hiram, GA 30141', 
+          'http://imba-westga.org/locations-of-interest/detail/4/1/silver-comet-sidetrail-hiram-trail-head', '542de0e0d64e846148000001', 8, 'SCM', 'N',
+          'N', '660066']
+          ,
+      
+          ['Stinky Trail', 33.3721804, -84.56768439999996, 'S', '955 Crosstown Drive, Peachtree City, GA 30269', 
+          'http://www.southsidecycling.com/mtb/mtb.php', '542dee91cbba430000000003', 15, 'STK', 'N',
+          'N', '336600']
+          ,
+      
+          ['Tribble Mill Park', 33.9072012, -83.90807530000001, 'E', '2125 Tribble Mill Parkway, Lawrenceville, GA 30045', 
+          'http://www.sorbagatr.org/trails/trail-tribble/', '5425ce82edc6f122d7000004', 12, 'TRM', 'N',
+          'N', '006633']
+          ,
+      
+          ['Yellow River Park', 33.7875517, -84.07305229999997, 'E', '3232 Juhan Road, Stone Mountain, GA 30087', 
+          'https://www.gwinnettcounty.com/portal/gwinnett/Departments/CommunityServices/ParksandRecreation/OurParksandFacilities/GuidetoYourParks/YellowRiverPark', '5425ce5eedc6f122d7000003', 12, 'YEL', 'N',
+          'N', '666600']
+          
+      
     ];
 
     var map = new google.maps.Map(document.getElementById('map'), {
@@ -301,9 +462,73 @@
       
      <nav id="traillist">
          <ul>
-         {% for site in sites %}
-              <li><a target= "_blank" href="http://maps.google.com/maps?daddr={{ site.address }}">{{ site.name }}</a></li>
-          {% endfor %}
+         
+              <li><a target= "_blank" href="http://maps.google.com/maps?daddr=5690 Old Stilesboro Road, Acworth, GA 30101">Allatoona Creek</a></li>
+          
+              <li><a target= "_blank" href="http://maps.google.com/maps?daddr=1600 Old Alabama Rd, Roswell, GA 30076">Big Creek Park</a></li>
+          
+              <li><a target= "_blank" href="http://maps.google.com/maps?daddr=2261 Sixes Rd, Canton, GA 30114">Blankets Creek</a></li>
+          
+              <li><a target= "_blank" href="http://maps.google.com/maps?daddr=5000 Highway 92/166, Douglasville, GA 30135">Boundary Waters Park</a></li>
+          
+              <li><a target= "_blank" href="http://maps.google.com/maps?daddr=Bull Mountain Parking Lot, Dahlonega, GA 30533">Bull and Jake Mt</a></li>
+          
+              <li><a target= "_blank" href="http://maps.google.com/maps?daddr=2300 Keith Bridge Rd, Cumming, GA 30041">Central Park</a></li>
+          
+              <li><a target= "_blank" href="http://maps.google.com/maps?daddr=5850 Charleston Park Rd, Cumming, GA 30041">Charleston Park</a></li>
+          
+              <li><a target= "_blank" href="http://maps.google.com/maps?daddr=2125 Elachee Drive, Gainesville, GA 30504">Chicopee Woods</a></li>
+          
+              <li><a target= "_blank" href="http://maps.google.com/maps?daddr=8720 Ephesus Church Road, Villa Rica, GA 30180">Clinton Nature Preserve</a></li>
+          
+              <li><a target= "_blank" href="http://maps.google.com/maps?daddr=152 Columns Dr SE, Marietta, GA 30067">Cochran Shoals/Sope Creek</a></li>
+          
+              <li><a target= "_blank" href="http://maps.google.com/maps?daddr=1661 Coldwater Road, Anniston, AL 36201">Coldwater Mountain</a></li>
+          
+              <li><a target= "_blank" href="http://maps.google.com/maps?daddr=1996 Centennial Olympic Pkwy, Conyers, GA 30013">Conyers Horse Park</a></li>
+          
+              <li><a target= "_blank" href="http://maps.google.com/maps?daddr=360 Mt Vernon Church Rd, Jackson, GA 30233">Dauset Trails</a></li>
+          
+              <li><a target= "_blank" href="http://maps.google.com/maps?daddr=513 Neese Road, Woodstock, GA 30188">Dupree Park</a></li>
+          
+              <li><a target= "_blank" href="http://maps.google.com/maps?daddr=Woodlawn Road, Clarks Hill, SC 29821, United States">FATS</a></li>
+          
+              <li><a target= "_blank" href="http://maps.google.com/maps?daddr=210 S. Broad Street, Winder, GA 30680">Fort Yargo</a></li>
+          
+              <li><a target= "_blank" href="http://maps.google.com/maps?daddr=55 Buford Highway, Suwanee, GA 30024">George Pierce Park</a></li>
+          
+              <li><a target= "_blank" href="http://maps.google.com/maps?daddr=2995 Luke Edwards Road, Dacula, GA 30019">Harbins Park</a></li>
+          
+              <li><a target= "_blank" href="http://maps.google.com/maps?daddr=5 Labor Creek Road, Rutledge, GA 30663">Hard Labor Creek</a></li>
+          
+              <li><a target= "_blank" href="http://maps.google.com/maps?daddr=53 Crawfordville Road, Union Point,GA">Hart Farms/Corry House</a></li>
+          
+              <li><a target= "_blank" href="http://maps.google.com/maps?daddr=2205 Echols Rd, Cumming, GA 30041">Haw Creek Park</a></li>
+          
+              <li><a target= "_blank" href="http://maps.google.com/maps?daddr=2543 Macon Hwy, Watkinsville, GA 30677">Heritage Park</a></li>
+          
+              <li><a target= "_blank" href="http://maps.google.com/maps?daddr=50 Lodge Rd SE, Cartersville, GA 30121">Iron Hill Trail (Red Top Mtn)</a></li>
+          
+              <li><a target= "_blank" href="http://maps.google.com/maps?daddr=Jackrabbit Campground, Hayesville, NC 28904">Jackrabbit Mountain</a></li>
+          
+              <li><a target= "_blank" href="http://maps.google.com/maps?daddr=3655 Preston Ridge Rd, Alpharetta, GA 30005">Mt. Adams</a></li>
+          
+              <li><a target= "_blank" href="http://maps.google.com/maps?daddr=1550 E. Paulding Dr, Dallas, GA 30157">Mt. Tabor MTB Park</a></li>
+          
+              <li><a target= "_blank" href="http://maps.google.com/maps?daddr=518 Ramp Road, Hartwell, GA 30643">Paynes Creek Park</a></li>
+          
+              <li><a target= "_blank" href="http://maps.google.com/maps?daddr=Conasauga Rd., Ellijay, GA 30540">Pinhoti/Mulberry Gap</a></li>
+          
+              <li><a target= "_blank" href="http://maps.google.com/maps?daddr=690 Rope Mill Road, Woodstock, GA 30188">Rope Mill Park</a></li>
+          
+              <li><a target= "_blank" href="http://maps.google.com/maps?daddr=Seaboard Ave, Hiram, GA 30141">Silver Comet Side Trail</a></li>
+          
+              <li><a target= "_blank" href="http://maps.google.com/maps?daddr=955 Crosstown Drive, Peachtree City, GA 30269">Stinky Trail</a></li>
+          
+              <li><a target= "_blank" href="http://maps.google.com/maps?daddr=2125 Tribble Mill Parkway, Lawrenceville, GA 30045">Tribble Mill Park</a></li>
+          
+              <li><a target= "_blank" href="http://maps.google.com/maps?daddr=3232 Juhan Road, Stone Mountain, GA 30087">Yellow River Park</a></li>
+          
          </ul>
      </nav>
       
@@ -320,11 +545,2827 @@
      </div>
  </script>
  
-  {% for site in sites %}
-      <script type=text id='{{ site.id }}'>
-       {% include 'site-min.html' %}
+  
+      <script type=text id='5425cffdedc6f122d7000012'>
+       
+<div style="margin-left: 10px; margin-right: 10px; margin-top: 10px;">
+<div class="row">
+<div class="col-xs-12 col-sm-6">
+      <!-- <h4 class="bg-primary" style="padding: 3px; border-radius: 3px;">
+          &nbsp;Allatoona Creek
+      </h4> -->
+           
+                   <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar " 
+                            style="width: 300px; background-color: #336600;"><span class="barlabel" style="font-size: 18px;">Allatoona Creek</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar bg-primary" style="width: 300px;"><span class="barlabel"><big>19</big> miles -Dedicated</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                        <div class="barContainer" style="width: 300px;">
+                            <div class="bar" style="background-color:#009933; width: 47px;"><span class="barlabel">&#9679;3</span></div>
+                            <div class="bar" style="background-color:#0033cc; width: 205px;"><span class="barlabel">&#9632;13</span></div>
+                            <div class="bar" style="background-color:#000000; width: 48px;"><span class="barlabel">&diams;3</span></div>
+                        </div>
+                    </div>
+                    
+                        <div class="colWrapper">
+                           <div class="barContainer">
+                               <div class="bar bg-info" style="width: 300px;"><span class="barlabel">Skills Area</span></div>
+                            </div>
+                        </div>
+                    
+            <div style="width: 300px;">  
+            <br>
+              <p>Variety of trails and features. 2 NEW trails just completed, see new trail map.</p>
+              <address>5690 Old Stilesboro Road, Acworth, GA 30101</address>
+              <p>CLOSED Nov. - Dec. for hunting season, limited hours Sep. and Oct., see website.</p>
+
+            <br>
+            
+            </div>
+           
+          <div class="colWrapper">
+            <div class="col-xs-6 text-center">
+                <div class="btn-group-vertical">
+                    <a class="btn btn-info" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Allatoona Creek georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+                    <a class="btn btn-info" target = "_blank" href="https://www.youtube.com/results?search_query=Allatoona Creek georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+                      <a class="btn btn-info" target = "_blank" href="http://www.singletracks.com/bike-trails/allatoona-creek.html"><i class="fa fa-bicycle"></i> Singletracks</a>
+                </div>
+
+            </div>        
+            <div class="col-xs-6 text-center">
+                  <div class="btn-group-vertical">
+                      <a class="btn btn-info" target="_blank" href="http://imba-westga.org/locations-of-interest/detail/2/1/allatoona-creek-main-trail-head"><i class="fa fa-star"></i> Website</a>
+                      <a class="btn btn-info" target="_blank" href="maps/AllatoonaCreek2014.pdf"><i class="fa fa-compass"></i> Trail Map</a>
+                      <a class="btn btn-info" target= "_blank" href="http://maps.google.com/maps?daddr=5690 Old Stilesboro Road, Acworth, GA 30101"><i class="fa fa-map-marker"></i> Directions</a>
+                  </div>
+            </div>
+            </div>
+            <!--
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="maps/AllatoonaCreek2014.pdf"><i class="fa fa-compass"></i> Trail Map</a>
+        <a class="btn btn-default btn-sm" target= "_blank" href="http://maps.google.com/maps?daddr=5690 Old Stilesboro Road, Acworth, GA 30101"><i class="fa fa-map-marker"></i> Directions</a>
+    </div>
+       <p></p>
+   <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://imba-westga.org/locations-of-interest/detail/2/1/allatoona-creek-main-trail-head"><i class="fa fa-star"></i> Website</a>
+       <a class="btn btn-default btn-sm" target = "_blank" href="http://www.singletracks.com/bike-trails/allatoona-creek.html"><i class="fa fa-bicycle"></i> Singletracks</a>  
+    </div>
+    <p></p>
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Allatoona Creek georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+        <a class="btn btn-default btn-sm" target = "_blank" href="https://www.youtube.com/results?search_query=Allatoona Creek georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+   </div>
+-->
+
+</div>
+<div class="hidden-xs col-sm-6">
+
+ <a target="_blank" href="http://maps.google.com/maps?daddr=5690 Old Stilesboro Road, Acworth, GA 30101"><img border="0" src="https://maps.googleapis.com/maps/api/staticmap?maptype=terrain&center=5690 Old Stilesboro Road, Acworth, GA 30101&markers=5690 Old Stilesboro Road, Acworth, GA 30101&zoom=13&size=400x400" alt="Allatoona Creek"/></a>
+</div>
+</div>
+</div>
+
+
+
       </script>
-  {% endfor %}
+  
+      <script type=text id='5425cfb6edc6f122d700000d'>
+       
+<div style="margin-left: 10px; margin-right: 10px; margin-top: 10px;">
+<div class="row">
+<div class="col-xs-12 col-sm-6">
+      <!-- <h4 class="bg-primary" style="padding: 3px; border-radius: 3px;">
+          &nbsp;Big Creek Park
+      </h4> -->
+           
+                   <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar " 
+                            style="width: 300px; background-color: #006600;"><span class="barlabel" style="font-size: 18px;">Big Creek Park</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar bg-primary" style="width: 300px;"><span class="barlabel"><big>7</big> miles -Dedicated</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                        <div class="barContainer" style="width: 300px;">
+                            <div class="bar" style="background-color:#009933; width: 85px;"><span class="barlabel">&#9679;2</span></div>
+                            <div class="bar" style="background-color:#0033cc; width: 171px;"><span class="barlabel">&#9632;4</span></div>
+                            <div class="bar" style="background-color:#000000; width: 44px;"><span class="barlabel">&diams;1</span></div>
+                        </div>
+                    </div>
+                    
+                        <div class="colWrapper">
+                           <div class="barContainer">
+                               <div class="bar bg-info" style="width: 300px;"><span class="barlabel">FreeRide | Pump Track | Skills Area</span></div>
+                            </div>
+                        </div>
+                    
+            <div style="width: 300px;">  
+            <br>
+              <p>Close to the city and good variety.</p>
+              <address>1600 Old Alabama Rd, Roswell, GA 30076</address>
+              <p>Sunrise until sunset unless posted otherwise</p>
+
+            <br>
+            
+            </div>
+           
+          <div class="colWrapper">
+            <div class="col-xs-6 text-center">
+                <div class="btn-group-vertical">
+                    <a class="btn btn-info" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Big Creek Park georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+                    <a class="btn btn-info" target = "_blank" href="https://www.youtube.com/results?search_query=Big Creek Park georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+                      <a class="btn btn-info" target = "_blank" href="http://www.singletracks.com/bike-trails/big-creek-roswell.html"><i class="fa fa-bicycle"></i> Singletracks</a>
+                </div>
+
+            </div>        
+            <div class="col-xs-6 text-center">
+                  <div class="btn-group-vertical">
+                      <a class="btn btn-info" target="_blank" href="http://www.rambo-mtb.org/big-creek-park"><i class="fa fa-star"></i> Website</a>
+                      <a class="btn btn-info" target="_blank" href="http://static1.squarespace.com/static/53bbf1e3e4b0012b3d961f39/t/5468df27e4b07d3571277c07/1416159015499/RAMBO_XC_Trails_2014.pdf"><i class="fa fa-compass"></i> Trail Map</a>
+                      <a class="btn btn-info" target= "_blank" href="http://maps.google.com/maps?daddr=1600 Old Alabama Rd, Roswell, GA 30076"><i class="fa fa-map-marker"></i> Directions</a>
+                  </div>
+            </div>
+            </div>
+            <!--
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://static1.squarespace.com/static/53bbf1e3e4b0012b3d961f39/t/5468df27e4b07d3571277c07/1416159015499/RAMBO_XC_Trails_2014.pdf"><i class="fa fa-compass"></i> Trail Map</a>
+        <a class="btn btn-default btn-sm" target= "_blank" href="http://maps.google.com/maps?daddr=1600 Old Alabama Rd, Roswell, GA 30076"><i class="fa fa-map-marker"></i> Directions</a>
+    </div>
+       <p></p>
+   <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://www.rambo-mtb.org/big-creek-park"><i class="fa fa-star"></i> Website</a>
+       <a class="btn btn-default btn-sm" target = "_blank" href="http://www.singletracks.com/bike-trails/big-creek-roswell.html"><i class="fa fa-bicycle"></i> Singletracks</a>  
+    </div>
+    <p></p>
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Big Creek Park georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+        <a class="btn btn-default btn-sm" target = "_blank" href="https://www.youtube.com/results?search_query=Big Creek Park georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+   </div>
+-->
+
+</div>
+<div class="hidden-xs col-sm-6">
+
+ <a target="_blank" href="http://maps.google.com/maps?daddr=1600 Old Alabama Rd, Roswell, GA 30076"><img border="0" src="https://maps.googleapis.com/maps/api/staticmap?maptype=terrain&center=1600 Old Alabama Rd, Roswell, GA 30076&markers=1600 Old Alabama Rd, Roswell, GA 30076&zoom=13&size=400x400" alt="Big Creek Park"/></a>
+</div>
+</div>
+</div>
+
+
+
+      </script>
+  
+      <script type=text id='5425d014edc6f122d7000014'>
+       
+<div style="margin-left: 10px; margin-right: 10px; margin-top: 10px;">
+<div class="row">
+<div class="col-xs-12 col-sm-6">
+      <!-- <h4 class="bg-primary" style="padding: 3px; border-radius: 3px;">
+          &nbsp;Blankets Creek
+      </h4> -->
+           
+                   <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar " 
+                            style="width: 300px; background-color: #003366;"><span class="barlabel" style="font-size: 18px;">Blankets Creek</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar bg-primary" style="width: 300px;"><span class="barlabel"><big>16</big> miles -Dedicated</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                        <div class="barContainer" style="width: 300px;">
+                            <div class="bar" style="background-color:#009933; width: 37px;"><span class="barlabel">&#9679;2</span></div>
+                            <div class="bar" style="background-color:#0033cc; width: 75px;"><span class="barlabel">&#9632;4</span></div>
+                            <div class="bar" style="background-color:#000000; width: 188px;"><span class="barlabel">&diams;8</span></div>
+                        </div>
+                    </div>
+                    
+                        <div class="colWrapper">
+                           <div class="barContainer">
+                               <div class="bar bg-info" style="width: 300px;"><span class="barlabel">FreeRide | Skills Area</span></div>
+                            </div>
+                        </div>
+                    
+            <div style="width: 300px;">  
+            <br>
+              <p>The big daddy.</p>
+              <address>2261 Sixes Rd, Canton, GA 30114</address>
+              <p>6am - 11pm</p>
+
+            <br>
+            
+            </div>
+           
+          <div class="colWrapper">
+            <div class="col-xs-6 text-center">
+                <div class="btn-group-vertical">
+                    <a class="btn btn-info" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Blankets Creek georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+                    <a class="btn btn-info" target = "_blank" href="https://www.youtube.com/results?search_query=Blankets Creek georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+                      <a class="btn btn-info" target = "_blank" href="http://www.singletracks.com/bike-trails/blankets-creek-bicycle-trail.html"><i class="fa fa-bicycle"></i> Singletracks</a>
+                </div>
+
+            </div>        
+            <div class="col-xs-6 text-center">
+                  <div class="btn-group-vertical">
+                      <a class="btn btn-info" target="_blank" href="http://sorbawoodstock.org/trails/"><i class="fa fa-star"></i> Website</a>
+                      <a class="btn btn-info" target="_blank" href="http://sorbawoodstock.org/s/BC-Trail-Map-grmi.pdf"><i class="fa fa-compass"></i> Trail Map</a>
+                      <a class="btn btn-info" target= "_blank" href="http://maps.google.com/maps?daddr=2261 Sixes Rd, Canton, GA 30114"><i class="fa fa-map-marker"></i> Directions</a>
+                  </div>
+            </div>
+            </div>
+            <!--
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://sorbawoodstock.org/s/BC-Trail-Map-grmi.pdf"><i class="fa fa-compass"></i> Trail Map</a>
+        <a class="btn btn-default btn-sm" target= "_blank" href="http://maps.google.com/maps?daddr=2261 Sixes Rd, Canton, GA 30114"><i class="fa fa-map-marker"></i> Directions</a>
+    </div>
+       <p></p>
+   <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://sorbawoodstock.org/trails/"><i class="fa fa-star"></i> Website</a>
+       <a class="btn btn-default btn-sm" target = "_blank" href="http://www.singletracks.com/bike-trails/blankets-creek-bicycle-trail.html"><i class="fa fa-bicycle"></i> Singletracks</a>  
+    </div>
+    <p></p>
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Blankets Creek georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+        <a class="btn btn-default btn-sm" target = "_blank" href="https://www.youtube.com/results?search_query=Blankets Creek georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+   </div>
+-->
+
+</div>
+<div class="hidden-xs col-sm-6">
+
+ <a target="_blank" href="http://maps.google.com/maps?daddr=2261 Sixes Rd, Canton, GA 30114"><img border="0" src="https://maps.googleapis.com/maps/api/staticmap?maptype=terrain&center=2261 Sixes Rd, Canton, GA 30114&markers=2261 Sixes Rd, Canton, GA 30114&zoom=13&size=400x400" alt="Blankets Creek"/></a>
+</div>
+</div>
+</div>
+
+
+
+      </script>
+  
+      <script type=text id='542de470cbba430000000002'>
+       
+<div style="margin-left: 10px; margin-right: 10px; margin-top: 10px;">
+<div class="row">
+<div class="col-xs-12 col-sm-6">
+      <!-- <h4 class="bg-primary" style="padding: 3px; border-radius: 3px;">
+          &nbsp;Boundary Waters Park
+      </h4> -->
+           
+                   <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar " 
+                            style="width: 300px; background-color: #663300;"><span class="barlabel" style="font-size: 18px;">Boundary Waters Park</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar bg-primary" style="width: 300px;"><span class="barlabel"><big>9</big> miles -Mixed Use</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                        <div class="barContainer" style="width: 300px;">
+                            <div class="bar" style="background-color:#009933; width: 33px;"><span class="barlabel">&#9679;1</span></div>
+                            <div class="bar" style="background-color:#0033cc; width: 100px;"><span class="barlabel">&#9632;3</span></div>
+                            <div class="bar" style="background-color:#000000; width: 167px;"><span class="barlabel">&diams;5</span></div>
+                        </div>
+                    </div>
+                    
+            <div style="width: 300px;">  
+            <br>
+              <p>Mixture of doubletrack, fire road and single track.  Watch for horses.</p>
+              <address>5000 Highway 92/166, Douglasville, GA 30135</address>
+              <p>Sunrise until sunset unless posted otherwise. </p>
+
+            <br>
+            
+            </div>
+           
+          <div class="colWrapper">
+            <div class="col-xs-6 text-center">
+                <div class="btn-group-vertical">
+                    <a class="btn btn-info" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Boundary Waters Park georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+                    <a class="btn btn-info" target = "_blank" href="https://www.youtube.com/results?search_query=Boundary Waters Park georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+                      <a class="btn btn-info" target = "_blank" href="http://www.singletracks.com/bike-trails/boundary-waters-park.html"><i class="fa fa-bicycle"></i> Singletracks</a>
+                </div>
+
+            </div>        
+            <div class="col-xs-6 text-center">
+                  <div class="btn-group-vertical">
+                      <a class="btn btn-info" target="_blank" href="http://imba-westga.org/locations-of-interest/detail/7/1/boundry-waters"><i class="fa fa-star"></i> Website</a>
+                      <a class="btn btn-info" target="_blank" href="http://www.celebratedouglascounty.com/view/global/viewdownload/&amp;docid=3596&amp;file=/Boundary_Waters_Trail_Map.pdf"><i class="fa fa-compass"></i> Trail Map</a>
+                      <a class="btn btn-info" target= "_blank" href="http://maps.google.com/maps?daddr=5000 Highway 92/166, Douglasville, GA 30135"><i class="fa fa-map-marker"></i> Directions</a>
+                  </div>
+            </div>
+            </div>
+            <!--
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://www.celebratedouglascounty.com/view/global/viewdownload/&amp;docid=3596&amp;file=/Boundary_Waters_Trail_Map.pdf"><i class="fa fa-compass"></i> Trail Map</a>
+        <a class="btn btn-default btn-sm" target= "_blank" href="http://maps.google.com/maps?daddr=5000 Highway 92/166, Douglasville, GA 30135"><i class="fa fa-map-marker"></i> Directions</a>
+    </div>
+       <p></p>
+   <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://imba-westga.org/locations-of-interest/detail/7/1/boundry-waters"><i class="fa fa-star"></i> Website</a>
+       <a class="btn btn-default btn-sm" target = "_blank" href="http://www.singletracks.com/bike-trails/boundary-waters-park.html"><i class="fa fa-bicycle"></i> Singletracks</a>  
+    </div>
+    <p></p>
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Boundary Waters Park georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+        <a class="btn btn-default btn-sm" target = "_blank" href="https://www.youtube.com/results?search_query=Boundary Waters Park georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+   </div>
+-->
+
+</div>
+<div class="hidden-xs col-sm-6">
+
+ <a target="_blank" href="http://maps.google.com/maps?daddr=5000 Highway 92/166, Douglasville, GA 30135"><img border="0" src="https://maps.googleapis.com/maps/api/staticmap?maptype=terrain&center=5000 Highway 92/166, Douglasville, GA 30135&markers=5000 Highway 92/166, Douglasville, GA 30135&zoom=13&size=400x400" alt="Boundary Waters Park"/></a>
+</div>
+</div>
+</div>
+
+
+
+      </script>
+  
+      <script type=text id='54d9419ed4c6a60c6435b450'>
+       
+<div style="margin-left: 10px; margin-right: 10px; margin-top: 10px;">
+<div class="row">
+<div class="col-xs-12 col-sm-6">
+      <!-- <h4 class="bg-primary" style="padding: 3px; border-radius: 3px;">
+          &nbsp;Bull and Jake Mt
+      </h4> -->
+           
+                   <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar " 
+                            style="width: 300px; background-color: #003366;"><span class="barlabel" style="font-size: 18px;">Bull and Jake Mt</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar bg-primary" style="width: 300px;"><span class="barlabel"><big>36</big> miles -Mixed Use</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                        <div class="barContainer" style="width: 300px;">
+                            <div class="bar" style="background-color:#009933; width: 0px;"><span class="barlabel"></span></div>
+                            <div class="bar" style="background-color:#0033cc; width: 300px;"><span class="barlabel">&#9632;36</span></div>
+                            <div class="bar" style="background-color:#000000; width: 0px;"><span class="barlabel"></span></div>
+                        </div>
+                    </div>
+                    
+            <div style="width: 300px;">  
+            <br>
+              <p>Forest Service trails over 4 sq. miles</p>
+              <address>Bull Mountain Parking Lot, Dahlonega, GA 30533</address>
+              <p>Sunrise until sunset unless otherwise posted</p>
+
+            <br>
+            
+            </div>
+           
+          <div class="colWrapper">
+            <div class="col-xs-6 text-center">
+                <div class="btn-group-vertical">
+                    <a class="btn btn-info" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Bull and Jake Mt georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+                    <a class="btn btn-info" target = "_blank" href="https://www.youtube.com/results?search_query=Bull and Jake Mt georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+                      <a class="btn btn-info" target = "_blank" href="http://www.singletracks.com/bike-trails/bull-mountain.html"><i class="fa fa-bicycle"></i> Singletracks</a>
+                </div>
+
+            </div>        
+            <div class="col-xs-6 text-center">
+                  <div class="btn-group-vertical">
+                      <a class="btn btn-info" target="_blank" href="http://www.fs.usda.gov/recarea/conf/recreation/ohv/recarea/?recid=10537&amp;actid=104"><i class="fa fa-star"></i> Website</a>
+                      <a class="btn btn-info" target="_blank" href="http://www.fs.usda.gov/Internet/FSE_DOCUMENTS/stelprdb5350433.pdf"><i class="fa fa-compass"></i> Trail Map</a>
+                      <a class="btn btn-info" target= "_blank" href="http://maps.google.com/maps?daddr=Bull Mountain Parking Lot, Dahlonega, GA 30533"><i class="fa fa-map-marker"></i> Directions</a>
+                  </div>
+            </div>
+            </div>
+            <!--
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://www.fs.usda.gov/Internet/FSE_DOCUMENTS/stelprdb5350433.pdf"><i class="fa fa-compass"></i> Trail Map</a>
+        <a class="btn btn-default btn-sm" target= "_blank" href="http://maps.google.com/maps?daddr=Bull Mountain Parking Lot, Dahlonega, GA 30533"><i class="fa fa-map-marker"></i> Directions</a>
+    </div>
+       <p></p>
+   <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://www.fs.usda.gov/recarea/conf/recreation/ohv/recarea/?recid=10537&amp;actid=104"><i class="fa fa-star"></i> Website</a>
+       <a class="btn btn-default btn-sm" target = "_blank" href="http://www.singletracks.com/bike-trails/bull-mountain.html"><i class="fa fa-bicycle"></i> Singletracks</a>  
+    </div>
+    <p></p>
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Bull and Jake Mt georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+        <a class="btn btn-default btn-sm" target = "_blank" href="https://www.youtube.com/results?search_query=Bull and Jake Mt georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+   </div>
+-->
+
+</div>
+<div class="hidden-xs col-sm-6">
+
+ <a target="_blank" href="http://maps.google.com/maps?daddr=Bull Mountain Parking Lot, Dahlonega, GA 30533"><img border="0" src="https://maps.googleapis.com/maps/api/staticmap?maptype=terrain&center=Bull Mountain Parking Lot, Dahlonega, GA 30533&markers=Bull Mountain Parking Lot, Dahlonega, GA 30533&zoom=13&size=400x400" alt="Bull and Jake Mt"/></a>
+</div>
+</div>
+</div>
+
+
+
+      </script>
+  
+      <script type=text id='5425cfcaedc6f122d700000e'>
+       
+<div style="margin-left: 10px; margin-right: 10px; margin-top: 10px;">
+<div class="row">
+<div class="col-xs-12 col-sm-6">
+      <!-- <h4 class="bg-primary" style="padding: 3px; border-radius: 3px;">
+          &nbsp;Central Park
+      </h4> -->
+           
+                   <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar " 
+                            style="width: 300px; background-color: #006600;"><span class="barlabel" style="font-size: 18px;">Central Park</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar bg-primary" style="width: 300px;"><span class="barlabel"><big>4</big> miles -Mixed Use</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                        <div class="barContainer" style="width: 300px;">
+                            <div class="bar" style="background-color:#009933; width: 300px;"><span class="barlabel">&#9679;4</span></div>
+                            <div class="bar" style="background-color:#0033cc; width: NaNpx;"><span class="barlabel"></span></div>
+                            <div class="bar" style="background-color:#000000; width: NaNpx;"><span class="barlabel"></span></div>
+                        </div>
+                    </div>
+                    
+                        <div class="colWrapper">
+                           <div class="barContainer">
+                               <div class="bar bg-info" style="width: 300px;"><span class="barlabel">Night Riding</span></div>
+                            </div>
+                        </div>
+                    
+            <div style="width: 300px;">  
+            <br>
+              <p>Open for night riding.</p>
+              <address>2300 Keith Bridge Rd, Cumming, GA 30041</address>
+              <p>7 am to 11 pm</p>
+
+            <br>
+            
+            </div>
+           
+          <div class="colWrapper">
+            <div class="col-xs-6 text-center">
+                <div class="btn-group-vertical">
+                    <a class="btn btn-info" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Central Park georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+                    <a class="btn btn-info" target = "_blank" href="https://www.youtube.com/results?search_query=Central Park georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+                      <a class="btn btn-info" target = "_blank" href="http://www.singletracks.com/bike-trails/central-park.html"><i class="fa fa-bicycle"></i> Singletracks</a>
+                </div>
+
+            </div>        
+            <div class="col-xs-6 text-center">
+                  <div class="btn-group-vertical">
+                      <a class="btn btn-info" target="_blank" href="http://www.rambo-mtb.org/central-park"><i class="fa fa-star"></i> Website</a>
+                      <a class="btn btn-info" target="_blank" href="http://www.rambo-mtb.org/s/Central-Park-Mountain-Bike-Trail-Map.pdf"><i class="fa fa-compass"></i> Trail Map</a>
+                      <a class="btn btn-info" target= "_blank" href="http://maps.google.com/maps?daddr=2300 Keith Bridge Rd, Cumming, GA 30041"><i class="fa fa-map-marker"></i> Directions</a>
+                  </div>
+            </div>
+            </div>
+            <!--
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://www.rambo-mtb.org/s/Central-Park-Mountain-Bike-Trail-Map.pdf"><i class="fa fa-compass"></i> Trail Map</a>
+        <a class="btn btn-default btn-sm" target= "_blank" href="http://maps.google.com/maps?daddr=2300 Keith Bridge Rd, Cumming, GA 30041"><i class="fa fa-map-marker"></i> Directions</a>
+    </div>
+       <p></p>
+   <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://www.rambo-mtb.org/central-park"><i class="fa fa-star"></i> Website</a>
+       <a class="btn btn-default btn-sm" target = "_blank" href="http://www.singletracks.com/bike-trails/central-park.html"><i class="fa fa-bicycle"></i> Singletracks</a>  
+    </div>
+    <p></p>
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Central Park georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+        <a class="btn btn-default btn-sm" target = "_blank" href="https://www.youtube.com/results?search_query=Central Park georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+   </div>
+-->
+
+</div>
+<div class="hidden-xs col-sm-6">
+
+ <a target="_blank" href="http://maps.google.com/maps?daddr=2300 Keith Bridge Rd, Cumming, GA 30041"><img border="0" src="https://maps.googleapis.com/maps/api/staticmap?maptype=terrain&center=2300 Keith Bridge Rd, Cumming, GA 30041&markers=2300 Keith Bridge Rd, Cumming, GA 30041&zoom=13&size=400x400" alt="Central Park"/></a>
+</div>
+</div>
+</div>
+
+
+
+      </script>
+  
+      <script type=text id='5425cf79edc6f122d700000b'>
+       
+<div style="margin-left: 10px; margin-right: 10px; margin-top: 10px;">
+<div class="row">
+<div class="col-xs-12 col-sm-6">
+      <!-- <h4 class="bg-primary" style="padding: 3px; border-radius: 3px;">
+          &nbsp;Charleston Park
+      </h4> -->
+           
+                   <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar " 
+                            style="width: 300px; background-color: #000066;"><span class="barlabel" style="font-size: 18px;">Charleston Park</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar bg-primary" style="width: 300px;"><span class="barlabel"><big>6</big> miles -Dedicated</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                        <div class="barContainer" style="width: 300px;">
+                            <div class="bar" style="background-color:#009933; width: 0px;"><span class="barlabel"></span></div>
+                            <div class="bar" style="background-color:#0033cc; width: 300px;"><span class="barlabel">&#9632;6</span></div>
+                            <div class="bar" style="background-color:#000000; width: 0px;"><span class="barlabel"></span></div>
+                        </div>
+                    </div>
+                    
+            <div style="width: 300px;">  
+            <br>
+              <p>Nice views of the lake.</p>
+              <address>5850 Charleston Park Rd, Cumming, GA 30041</address>
+              <p>Reopened with a new parking lot and nice trail updates!</p>
+
+            <br>
+            
+            </div>
+           
+          <div class="colWrapper">
+            <div class="col-xs-6 text-center">
+                <div class="btn-group-vertical">
+                    <a class="btn btn-info" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Charleston Park georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+                    <a class="btn btn-info" target = "_blank" href="https://www.youtube.com/results?search_query=Charleston Park georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+                      <a class="btn btn-info" target = "_blank" href="http://www.singletracks.com/bike-trails/charleston-park.html"><i class="fa fa-bicycle"></i> Singletracks</a>
+                </div>
+
+            </div>        
+            <div class="col-xs-6 text-center">
+                  <div class="btn-group-vertical">
+                      <a class="btn btn-info" target="_blank" href="http://www.rambo-mtb.org/charleston-park"><i class="fa fa-star"></i> Website</a>
+                      <a class="btn btn-info" target="_blank" href="http://www.rambo-mtb.org/s/CharlestonTrailMap.jpg"><i class="fa fa-compass"></i> Trail Map</a>
+                      <a class="btn btn-info" target= "_blank" href="http://maps.google.com/maps?daddr=5850 Charleston Park Rd, Cumming, GA 30041"><i class="fa fa-map-marker"></i> Directions</a>
+                  </div>
+            </div>
+            </div>
+            <!--
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://www.rambo-mtb.org/s/CharlestonTrailMap.jpg"><i class="fa fa-compass"></i> Trail Map</a>
+        <a class="btn btn-default btn-sm" target= "_blank" href="http://maps.google.com/maps?daddr=5850 Charleston Park Rd, Cumming, GA 30041"><i class="fa fa-map-marker"></i> Directions</a>
+    </div>
+       <p></p>
+   <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://www.rambo-mtb.org/charleston-park"><i class="fa fa-star"></i> Website</a>
+       <a class="btn btn-default btn-sm" target = "_blank" href="http://www.singletracks.com/bike-trails/charleston-park.html"><i class="fa fa-bicycle"></i> Singletracks</a>  
+    </div>
+    <p></p>
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Charleston Park georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+        <a class="btn btn-default btn-sm" target = "_blank" href="https://www.youtube.com/results?search_query=Charleston Park georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+   </div>
+-->
+
+</div>
+<div class="hidden-xs col-sm-6">
+
+ <a target="_blank" href="http://maps.google.com/maps?daddr=5850 Charleston Park Rd, Cumming, GA 30041"><img border="0" src="https://maps.googleapis.com/maps/api/staticmap?maptype=terrain&center=5850 Charleston Park Rd, Cumming, GA 30041&markers=5850 Charleston Park Rd, Cumming, GA 30041&zoom=13&size=400x400" alt="Charleston Park"/></a>
+</div>
+</div>
+</div>
+
+
+
+      </script>
+  
+      <script type=text id='5425cf54edc6f122d700000a'>
+       
+<div style="margin-left: 10px; margin-right: 10px; margin-top: 10px;">
+<div class="row">
+<div class="col-xs-12 col-sm-6">
+      <!-- <h4 class="bg-primary" style="padding: 3px; border-radius: 3px;">
+          &nbsp;Chicopee Woods
+      </h4> -->
+           
+                   <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar " 
+                            style="width: 300px; background-color: #336600;"><span class="barlabel" style="font-size: 18px;">Chicopee Woods</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar bg-primary" style="width: 300px;"><span class="barlabel"><big>21</big> miles -Dedicated</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                        <div class="barContainer" style="width: 300px;">
+                            <div class="bar" style="background-color:#009933; width: 42px;"><span class="barlabel">&#9679;3</span></div>
+                            <div class="bar" style="background-color:#0033cc; width: 200px;"><span class="barlabel">&#9632;14</span></div>
+                            <div class="bar" style="background-color:#000000; width: 58px;"><span class="barlabel">&diams;4</span></div>
+                        </div>
+                    </div>
+                    
+            <div style="width: 300px;">  
+            <br>
+              <p>Lots of trails and variety.</p>
+              <address>2125 Elachee Drive, Gainesville, GA 30504</address>
+              <p>Sunrise until sunset unless posted otherwise</p>
+
+            <br>
+            
+            </div>
+           
+          <div class="colWrapper">
+            <div class="col-xs-6 text-center">
+                <div class="btn-group-vertical">
+                    <a class="btn btn-info" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Chicopee Woods georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+                    <a class="btn btn-info" target = "_blank" href="https://www.youtube.com/results?search_query=Chicopee Woods georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+                      <a class="btn btn-info" target = "_blank" href="http://www.singletracks.com/bike-trails/chicopee-woods.html"><i class="fa fa-bicycle"></i> Singletracks</a>
+                </div>
+
+            </div>        
+            <div class="col-xs-6 text-center">
+                  <div class="btn-group-vertical">
+                      <a class="btn btn-info" target="_blank" href="http://gainesvillesorba.org"><i class="fa fa-star"></i> Website</a>
+                      <a class="btn btn-info" target="_blank" href="http://mobilemaplets.com/thumbnails/13820_thumbnail-1024.jpg"><i class="fa fa-compass"></i> Trail Map</a>
+                      <a class="btn btn-info" target= "_blank" href="http://maps.google.com/maps?daddr=2125 Elachee Drive, Gainesville, GA 30504"><i class="fa fa-map-marker"></i> Directions</a>
+                  </div>
+            </div>
+            </div>
+            <!--
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://mobilemaplets.com/thumbnails/13820_thumbnail-1024.jpg"><i class="fa fa-compass"></i> Trail Map</a>
+        <a class="btn btn-default btn-sm" target= "_blank" href="http://maps.google.com/maps?daddr=2125 Elachee Drive, Gainesville, GA 30504"><i class="fa fa-map-marker"></i> Directions</a>
+    </div>
+       <p></p>
+   <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://gainesvillesorba.org"><i class="fa fa-star"></i> Website</a>
+       <a class="btn btn-default btn-sm" target = "_blank" href="http://www.singletracks.com/bike-trails/chicopee-woods.html"><i class="fa fa-bicycle"></i> Singletracks</a>  
+    </div>
+    <p></p>
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Chicopee Woods georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+        <a class="btn btn-default btn-sm" target = "_blank" href="https://www.youtube.com/results?search_query=Chicopee Woods georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+   </div>
+-->
+
+</div>
+<div class="hidden-xs col-sm-6">
+
+ <a target="_blank" href="http://maps.google.com/maps?daddr=2125 Elachee Drive, Gainesville, GA 30504"><img border="0" src="https://maps.googleapis.com/maps/api/staticmap?maptype=terrain&center=2125 Elachee Drive, Gainesville, GA 30504&markers=2125 Elachee Drive, Gainesville, GA 30504&zoom=13&size=400x400" alt="Chicopee Woods"/></a>
+</div>
+</div>
+</div>
+
+
+
+      </script>
+  
+      <script type=text id='542de345cbba430000000001'>
+       
+<div style="margin-left: 10px; margin-right: 10px; margin-top: 10px;">
+<div class="row">
+<div class="col-xs-12 col-sm-6">
+      <!-- <h4 class="bg-primary" style="padding: 3px; border-radius: 3px;">
+          &nbsp;Clinton Nature Preserve
+      </h4> -->
+           
+                   <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar " 
+                            style="width: 300px; background-color: #660066;"><span class="barlabel" style="font-size: 18px;">Clinton Nature Preserve</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar bg-primary" style="width: 300px;"><span class="barlabel"><big>7</big> miles -Mixed Use</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                        <div class="barContainer" style="width: 300px;">
+                            <div class="bar" style="background-color:#009933; width: 42px;"><span class="barlabel">&#9679;1</span></div>
+                            <div class="bar" style="background-color:#0033cc; width: 128px;"><span class="barlabel">&#9632;3</span></div>
+                            <div class="bar" style="background-color:#000000; width: 130px;"><span class="barlabel">&diams;4</span></div>
+                        </div>
+                    </div>
+                    
+            <div style="width: 300px;">  
+            <br>
+              <p>3 main trails plus side trails and alternates make up 6-9 miles of riding.</p>
+              <address>8720 Ephesus Church Road, Villa Rica, GA 30180</address>
+              <p>Sunrise until sunset unless posted otherwise. </p>
+
+            <br>
+            
+            </div>
+           
+          <div class="colWrapper">
+            <div class="col-xs-6 text-center">
+                <div class="btn-group-vertical">
+                    <a class="btn btn-info" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Clinton Nature Preserve georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+                    <a class="btn btn-info" target = "_blank" href="https://www.youtube.com/results?search_query=Clinton Nature Preserve georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+                      <a class="btn btn-info" target = "_blank" href="http://www.singletracks.com/bike-trails/clinton-nature-park.html"><i class="fa fa-bicycle"></i> Singletracks</a>
+                </div>
+
+            </div>        
+            <div class="col-xs-6 text-center">
+                  <div class="btn-group-vertical">
+                      <a class="btn btn-info" target="_blank" href="http://imba-westga.org/locations-of-interest/detail/5/1/clinton-nature-preserve"><i class="fa fa-star"></i> Website</a>
+                      <a class="btn btn-info" target="_blank" href="http://imba-westga.org/images/trails/Clinton_Trails_Brochure.pdf"><i class="fa fa-compass"></i> Trail Map</a>
+                      <a class="btn btn-info" target= "_blank" href="http://maps.google.com/maps?daddr=8720 Ephesus Church Road, Villa Rica, GA 30180"><i class="fa fa-map-marker"></i> Directions</a>
+                  </div>
+            </div>
+            </div>
+            <!--
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://imba-westga.org/images/trails/Clinton_Trails_Brochure.pdf"><i class="fa fa-compass"></i> Trail Map</a>
+        <a class="btn btn-default btn-sm" target= "_blank" href="http://maps.google.com/maps?daddr=8720 Ephesus Church Road, Villa Rica, GA 30180"><i class="fa fa-map-marker"></i> Directions</a>
+    </div>
+       <p></p>
+   <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://imba-westga.org/locations-of-interest/detail/5/1/clinton-nature-preserve"><i class="fa fa-star"></i> Website</a>
+       <a class="btn btn-default btn-sm" target = "_blank" href="http://www.singletracks.com/bike-trails/clinton-nature-park.html"><i class="fa fa-bicycle"></i> Singletracks</a>  
+    </div>
+    <p></p>
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Clinton Nature Preserve georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+        <a class="btn btn-default btn-sm" target = "_blank" href="https://www.youtube.com/results?search_query=Clinton Nature Preserve georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+   </div>
+-->
+
+</div>
+<div class="hidden-xs col-sm-6">
+
+ <a target="_blank" href="http://maps.google.com/maps?daddr=8720 Ephesus Church Road, Villa Rica, GA 30180"><img border="0" src="https://maps.googleapis.com/maps/api/staticmap?maptype=terrain&center=8720 Ephesus Church Road, Villa Rica, GA 30180&markers=8720 Ephesus Church Road, Villa Rica, GA 30180&zoom=13&size=400x400" alt="Clinton Nature Preserve"/></a>
+</div>
+</div>
+</div>
+
+
+
+      </script>
+  
+      <script type=text id='5425cff1edc6f122d7000011'>
+       
+<div style="margin-left: 10px; margin-right: 10px; margin-top: 10px;">
+<div class="row">
+<div class="col-xs-12 col-sm-6">
+      <!-- <h4 class="bg-primary" style="padding: 3px; border-radius: 3px;">
+          &nbsp;Cochran Shoals/Sope Creek
+      </h4> -->
+           
+                   <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar " 
+                            style="width: 300px; background-color: #660000;"><span class="barlabel" style="font-size: 18px;">Cochran Shoals/Sope Creek</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar bg-primary" style="width: 300px;"><span class="barlabel"><big>8</big> miles -Mixed Use</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                        <div class="barContainer" style="width: 300px;">
+                            <div class="bar" style="background-color:#009933; width: 112px;"><span class="barlabel">&#9679;3</span></div>
+                            <div class="bar" style="background-color:#0033cc; width: 150px;"><span class="barlabel">&#9632;4</span></div>
+                            <div class="bar" style="background-color:#000000; width: 38px;"><span class="barlabel">&diams;1</span></div>
+                        </div>
+                    </div>
+                    
+            <div style="width: 300px;">  
+            <br>
+              <p>Very popular, parking fills on weekends.</p>
+              <address>152 Columns Dr SE, Marietta, GA 30067</address>
+              <p>9am -5 pm daily.  Parking fee required.</p>
+
+            <br>
+            
+            </div>
+           
+          <div class="colWrapper">
+            <div class="col-xs-6 text-center">
+                <div class="btn-group-vertical">
+                    <a class="btn btn-info" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Cochran Shoals/Sope Creek georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+                    <a class="btn btn-info" target = "_blank" href="https://www.youtube.com/results?search_query=Cochran Shoals/Sope Creek georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+                      <a class="btn btn-info" target = "_blank" href="http://www.singletracks.com/bike-trails/sope-creek.html"><i class="fa fa-bicycle"></i> Singletracks</a>
+                </div>
+
+            </div>        
+            <div class="col-xs-6 text-center">
+                  <div class="btn-group-vertical">
+                      <a class="btn btn-info" target="_blank" href="http://www.sorbaatlanta.org/p/blog-page.html"><i class="fa fa-star"></i> Website</a>
+                      <a class="btn btn-info" target="_blank" href="http://2.bp.blogspot.com/-sEMLaQiUyDA/UlBRBIYRtHI/AAAAAAAABQM/ny4USRs41Sg/s1600/maps-new.jpg"><i class="fa fa-compass"></i> Trail Map</a>
+                      <a class="btn btn-info" target= "_blank" href="http://maps.google.com/maps?daddr=152 Columns Dr SE, Marietta, GA 30067"><i class="fa fa-map-marker"></i> Directions</a>
+                  </div>
+            </div>
+            </div>
+            <!--
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://2.bp.blogspot.com/-sEMLaQiUyDA/UlBRBIYRtHI/AAAAAAAABQM/ny4USRs41Sg/s1600/maps-new.jpg"><i class="fa fa-compass"></i> Trail Map</a>
+        <a class="btn btn-default btn-sm" target= "_blank" href="http://maps.google.com/maps?daddr=152 Columns Dr SE, Marietta, GA 30067"><i class="fa fa-map-marker"></i> Directions</a>
+    </div>
+       <p></p>
+   <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://www.sorbaatlanta.org/p/blog-page.html"><i class="fa fa-star"></i> Website</a>
+       <a class="btn btn-default btn-sm" target = "_blank" href="http://www.singletracks.com/bike-trails/sope-creek.html"><i class="fa fa-bicycle"></i> Singletracks</a>  
+    </div>
+    <p></p>
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Cochran Shoals/Sope Creek georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+        <a class="btn btn-default btn-sm" target = "_blank" href="https://www.youtube.com/results?search_query=Cochran Shoals/Sope Creek georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+   </div>
+-->
+
+</div>
+<div class="hidden-xs col-sm-6">
+
+ <a target="_blank" href="http://maps.google.com/maps?daddr=152 Columns Dr SE, Marietta, GA 30067"><img border="0" src="https://maps.googleapis.com/maps/api/staticmap?maptype=terrain&center=152 Columns Dr SE, Marietta, GA 30067&markers=152 Columns Dr SE, Marietta, GA 30067&zoom=13&size=400x400" alt="Cochran Shoals/Sope Creek"/></a>
+</div>
+</div>
+</div>
+
+
+
+      </script>
+  
+      <script type=text id='54d93470d4c6a60c6435b44c'>
+       
+<div style="margin-left: 10px; margin-right: 10px; margin-top: 10px;">
+<div class="row">
+<div class="col-xs-12 col-sm-6">
+      <!-- <h4 class="bg-primary" style="padding: 3px; border-radius: 3px;">
+          &nbsp;Coldwater Mountain
+      </h4> -->
+           
+                   <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar " 
+                            style="width: 300px; background-color: #006666;"><span class="barlabel" style="font-size: 18px;">Coldwater Mountain</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar bg-primary" style="width: 300px;"><span class="barlabel"><big>25</big> miles -Dedicated</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                        <div class="barContainer" style="width: 300px;">
+                            <div class="bar" style="background-color:#009933; width: 120px;"><span class="barlabel">&#9679;10</span></div>
+                            <div class="bar" style="background-color:#0033cc; width: 180px;"><span class="barlabel">&#9632;15</span></div>
+                            <div class="bar" style="background-color:#000000; width: 0px;"><span class="barlabel"></span></div>
+                        </div>
+                    </div>
+                    
+                        <div class="colWrapper">
+                           <div class="barContainer">
+                               <div class="bar bg-info" style="width: 300px;"><span class="barlabel">FreeRide</span></div>
+                            </div>
+                        </div>
+                    
+            <div style="width: 300px;">  
+            <br>
+              <p>Fast growing trail system with long downhill sections</p>
+              <address>1661 Coldwater Road, Anniston, AL 36201</address>
+              <p>Sunrise until sunset unless otherwise posted</p>
+
+            <br>
+            
+            </div>
+           
+          <div class="colWrapper">
+            <div class="col-xs-6 text-center">
+                <div class="btn-group-vertical">
+                    <a class="btn btn-info" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Coldwater Mountain georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+                    <a class="btn btn-info" target = "_blank" href="https://www.youtube.com/results?search_query=Coldwater Mountain georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+                      <a class="btn btn-info" target = "_blank" href="http://www.singletracks.com/bike-trails/coldwater-mt.html"><i class="fa fa-bicycle"></i> Singletracks</a>
+                </div>
+
+            </div>        
+            <div class="col-xs-6 text-center">
+                  <div class="btn-group-vertical">
+                      <a class="btn btn-info" target="_blank" href="http://www.neaba.net/coldwatermtb"><i class="fa fa-star"></i> Website</a>
+                      <a class="btn btn-info" target="_blank" href="http://static1.squarespace.com/static/546479afe4b070b16de8994b/t/54683742e4b0cbc539efaf53/1416116034946/CWMALL.jpg"><i class="fa fa-compass"></i> Trail Map</a>
+                      <a class="btn btn-info" target= "_blank" href="http://maps.google.com/maps?daddr=1661 Coldwater Road, Anniston, AL 36201"><i class="fa fa-map-marker"></i> Directions</a>
+                  </div>
+            </div>
+            </div>
+            <!--
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://static1.squarespace.com/static/546479afe4b070b16de8994b/t/54683742e4b0cbc539efaf53/1416116034946/CWMALL.jpg"><i class="fa fa-compass"></i> Trail Map</a>
+        <a class="btn btn-default btn-sm" target= "_blank" href="http://maps.google.com/maps?daddr=1661 Coldwater Road, Anniston, AL 36201"><i class="fa fa-map-marker"></i> Directions</a>
+    </div>
+       <p></p>
+   <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://www.neaba.net/coldwatermtb"><i class="fa fa-star"></i> Website</a>
+       <a class="btn btn-default btn-sm" target = "_blank" href="http://www.singletracks.com/bike-trails/coldwater-mt.html"><i class="fa fa-bicycle"></i> Singletracks</a>  
+    </div>
+    <p></p>
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Coldwater Mountain georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+        <a class="btn btn-default btn-sm" target = "_blank" href="https://www.youtube.com/results?search_query=Coldwater Mountain georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+   </div>
+-->
+
+</div>
+<div class="hidden-xs col-sm-6">
+
+ <a target="_blank" href="http://maps.google.com/maps?daddr=1661 Coldwater Road, Anniston, AL 36201"><img border="0" src="https://maps.googleapis.com/maps/api/staticmap?maptype=terrain&center=1661 Coldwater Road, Anniston, AL 36201&markers=1661 Coldwater Road, Anniston, AL 36201&zoom=13&size=400x400" alt="Coldwater Mountain"/></a>
+</div>
+</div>
+</div>
+
+
+
+      </script>
+  
+      <script type=text id='5425ce4cedc6f122d7000002'>
+       
+<div style="margin-left: 10px; margin-right: 10px; margin-top: 10px;">
+<div class="row">
+<div class="col-xs-12 col-sm-6">
+      <!-- <h4 class="bg-primary" style="padding: 3px; border-radius: 3px;">
+          &nbsp;Conyers Horse Park
+      </h4> -->
+           
+                   <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar " 
+                            style="width: 300px; background-color: #660000;"><span class="barlabel" style="font-size: 18px;">Conyers Horse Park</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar bg-primary" style="width: 300px;"><span class="barlabel"><big>8</big> miles -Dedicated</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                        <div class="barContainer" style="width: 300px;">
+                            <div class="bar" style="background-color:#009933; width: 0px;"><span class="barlabel"></span></div>
+                            <div class="bar" style="background-color:#0033cc; width: 300px;"><span class="barlabel">&#9632;8</span></div>
+                            <div class="bar" style="background-color:#000000; width: 0px;"><span class="barlabel"></span></div>
+                        </div>
+                    </div>
+                    
+            <div style="width: 300px;">  
+            <br>
+              <p>1996 Olympics Mountain Bike Course</p>
+              <address>1996 Centennial Olympic Pkwy, Conyers, GA 30013</address>
+              <p>Trails are open from daylight to dusk. On occasion, trails may be closed due to other events occurring at the Park. Please make sure you check the calendar of events on the website for dates the trails are closed. </p>
+
+            <br>
+            
+            </div>
+           
+          <div class="colWrapper">
+            <div class="col-xs-6 text-center">
+                <div class="btn-group-vertical">
+                    <a class="btn btn-info" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Conyers Horse Park georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+                    <a class="btn btn-info" target = "_blank" href="https://www.youtube.com/results?search_query=Conyers Horse Park georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+                      <a class="btn btn-info" target = "_blank" href="http://www.singletracks.com/bike-trails/georgia-international-horse-park.html"><i class="fa fa-bicycle"></i> Singletracks</a>
+                </div>
+
+            </div>        
+            <div class="col-xs-6 text-center">
+                  <div class="btn-group-vertical">
+                      <a class="btn btn-info" target="_blank" href="http://www.georgiahorsepark.com/Recreation/MountainBikingTrails/tabid/523/Default.aspx"><i class="fa fa-star"></i> Website</a>
+                      <a class="btn btn-info" target="_blank" href="http://www.georgiahorsepark.com/Portals/4/GIHP%20trails%20map.pdf"><i class="fa fa-compass"></i> Trail Map</a>
+                      <a class="btn btn-info" target= "_blank" href="http://maps.google.com/maps?daddr=1996 Centennial Olympic Pkwy, Conyers, GA 30013"><i class="fa fa-map-marker"></i> Directions</a>
+                  </div>
+            </div>
+            </div>
+            <!--
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://www.georgiahorsepark.com/Portals/4/GIHP%20trails%20map.pdf"><i class="fa fa-compass"></i> Trail Map</a>
+        <a class="btn btn-default btn-sm" target= "_blank" href="http://maps.google.com/maps?daddr=1996 Centennial Olympic Pkwy, Conyers, GA 30013"><i class="fa fa-map-marker"></i> Directions</a>
+    </div>
+       <p></p>
+   <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://www.georgiahorsepark.com/Recreation/MountainBikingTrails/tabid/523/Default.aspx"><i class="fa fa-star"></i> Website</a>
+       <a class="btn btn-default btn-sm" target = "_blank" href="http://www.singletracks.com/bike-trails/georgia-international-horse-park.html"><i class="fa fa-bicycle"></i> Singletracks</a>  
+    </div>
+    <p></p>
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Conyers Horse Park georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+        <a class="btn btn-default btn-sm" target = "_blank" href="https://www.youtube.com/results?search_query=Conyers Horse Park georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+   </div>
+-->
+
+</div>
+<div class="hidden-xs col-sm-6">
+
+ <a target="_blank" href="http://maps.google.com/maps?daddr=1996 Centennial Olympic Pkwy, Conyers, GA 30013"><img border="0" src="https://maps.googleapis.com/maps/api/staticmap?maptype=terrain&center=1996 Centennial Olympic Pkwy, Conyers, GA 30013&markers=1996 Centennial Olympic Pkwy, Conyers, GA 30013&zoom=13&size=400x400" alt="Conyers Horse Park"/></a>
+</div>
+</div>
+</div>
+
+
+
+      </script>
+  
+      <script type=text id='5425ce2dedc6f122d7000001'>
+       
+<div style="margin-left: 10px; margin-right: 10px; margin-top: 10px;">
+<div class="row">
+<div class="col-xs-12 col-sm-6">
+      <!-- <h4 class="bg-primary" style="padding: 3px; border-radius: 3px;">
+          &nbsp;Dauset Trails
+      </h4> -->
+           
+                   <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar " 
+                            style="width: 300px; background-color: #330066;"><span class="barlabel" style="font-size: 18px;">Dauset Trails</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar bg-primary" style="width: 300px;"><span class="barlabel"><big>20</big> miles -Mixed Use</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                        <div class="barContainer" style="width: 300px;">
+                            <div class="bar" style="background-color:#009933; width: 60px;"><span class="barlabel">&#9679;4</span></div>
+                            <div class="bar" style="background-color:#0033cc; width: 120px;"><span class="barlabel">&#9632;8</span></div>
+                            <div class="bar" style="background-color:#000000; width: 120px;"><span class="barlabel">&diams;8</span></div>
+                        </div>
+                    </div>
+                    
+            <div style="width: 300px;">  
+            <br>
+              <p>Long set of trails between Atlanta and Macon.</p>
+              <address>360 Mt Vernon Church Rd, Jackson, GA 30233</address>
+              <p>Trails are open from sunrise to 10:00 p.m.  Trail Head Parking is 300 yards left of Main Entrance.</p>
+
+            <br>
+            
+            </div>
+           
+          <div class="colWrapper">
+            <div class="col-xs-6 text-center">
+                <div class="btn-group-vertical">
+                    <a class="btn btn-info" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Dauset Trails georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+                    <a class="btn btn-info" target = "_blank" href="https://www.youtube.com/results?search_query=Dauset Trails georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+                      <a class="btn btn-info" target = "_blank" href="http://www.singletracks.com/bike-trails/dauset-trails-nature-center.html"><i class="fa fa-bicycle"></i> Singletracks</a>
+                </div>
+
+            </div>        
+            <div class="col-xs-6 text-center">
+                  <div class="btn-group-vertical">
+                      <a class="btn btn-info" target="_blank" href="http://www.dausettrails.com/trails.htm"><i class="fa fa-star"></i> Website</a>
+                      <a class="btn btn-info" target="_blank" href="http://www.dausettrails.com/bikemap14.pdf"><i class="fa fa-compass"></i> Trail Map</a>
+                      <a class="btn btn-info" target= "_blank" href="http://maps.google.com/maps?daddr=360 Mt Vernon Church Rd, Jackson, GA 30233"><i class="fa fa-map-marker"></i> Directions</a>
+                  </div>
+            </div>
+            </div>
+            <!--
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://www.dausettrails.com/bikemap14.pdf"><i class="fa fa-compass"></i> Trail Map</a>
+        <a class="btn btn-default btn-sm" target= "_blank" href="http://maps.google.com/maps?daddr=360 Mt Vernon Church Rd, Jackson, GA 30233"><i class="fa fa-map-marker"></i> Directions</a>
+    </div>
+       <p></p>
+   <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://www.dausettrails.com/trails.htm"><i class="fa fa-star"></i> Website</a>
+       <a class="btn btn-default btn-sm" target = "_blank" href="http://www.singletracks.com/bike-trails/dauset-trails-nature-center.html"><i class="fa fa-bicycle"></i> Singletracks</a>  
+    </div>
+    <p></p>
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Dauset Trails georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+        <a class="btn btn-default btn-sm" target = "_blank" href="https://www.youtube.com/results?search_query=Dauset Trails georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+   </div>
+-->
+
+</div>
+<div class="hidden-xs col-sm-6">
+
+ <a target="_blank" href="http://maps.google.com/maps?daddr=360 Mt Vernon Church Rd, Jackson, GA 30233"><img border="0" src="https://maps.googleapis.com/maps/api/staticmap?maptype=terrain&center=360 Mt Vernon Church Rd, Jackson, GA 30233&markers=360 Mt Vernon Church Rd, Jackson, GA 30233&zoom=13&size=400x400" alt="Dauset Trails"/></a>
+</div>
+</div>
+</div>
+
+
+
+      </script>
+  
+      <script type=text id='542995d9bd64370000000001'>
+       
+<div style="margin-left: 10px; margin-right: 10px; margin-top: 10px;">
+<div class="row">
+<div class="col-xs-12 col-sm-6">
+      <!-- <h4 class="bg-primary" style="padding: 3px; border-radius: 3px;">
+          &nbsp;Dupree Park
+      </h4> -->
+           
+                   <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar " 
+                            style="width: 300px; background-color: #660000;"><span class="barlabel" style="font-size: 18px;">Dupree Park</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar bg-primary" style="width: 300px;"><span class="barlabel"><big>1</big> miles -Dedicated</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                        <div class="barContainer" style="width: 300px;">
+                            <div class="bar" style="background-color:#009933; width: 300px;"><span class="barlabel">&#9679;1</span></div>
+                            <div class="bar" style="background-color:#0033cc; width: NaNpx;"><span class="barlabel"></span></div>
+                            <div class="bar" style="background-color:#000000; width: NaNpx;"><span class="barlabel"></span></div>
+                        </div>
+                    </div>
+                    
+                        <div class="colWrapper">
+                           <div class="barContainer">
+                               <div class="bar bg-info" style="width: 300px;"><span class="barlabel">Skills Area</span></div>
+                            </div>
+                        </div>
+                    
+            <div style="width: 300px;">  
+            <br>
+              <p>A new trail ideal for kids and beginners, with mini skills park.</p>
+              <address>513 Neese Road, Woodstock, GA 30188</address>
+              <p>7 am - 11 pm</p>
+
+            <br>
+            
+            </div>
+           
+          <div class="colWrapper">
+            <div class="col-xs-6 text-center">
+                <div class="btn-group-vertical">
+                    <a class="btn btn-info" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Dupree Park georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+                    <a class="btn btn-info" target = "_blank" href="https://www.youtube.com/results?search_query=Dupree Park georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+                      <a class="btn btn-info" target = "_blank" href="http://www.singletracks.com/bike-trails/dupree-park.html"><i class="fa fa-bicycle"></i> Singletracks</a>
+                </div>
+
+            </div>        
+            <div class="col-xs-6 text-center">
+                  <div class="btn-group-vertical">
+                      <a class="btn btn-info" target="_blank" href="http://www.woodstockga.gov/index.aspx?NID=350"><i class="fa fa-star"></i> Website</a>
+                      <a class="btn btn-info" target="_blank" href=""><i class="fa fa-compass"></i> Trail Map</a>
+                      <a class="btn btn-info" target= "_blank" href="http://maps.google.com/maps?daddr=513 Neese Road, Woodstock, GA 30188"><i class="fa fa-map-marker"></i> Directions</a>
+                  </div>
+            </div>
+            </div>
+            <!--
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href=""><i class="fa fa-compass"></i> Trail Map</a>
+        <a class="btn btn-default btn-sm" target= "_blank" href="http://maps.google.com/maps?daddr=513 Neese Road, Woodstock, GA 30188"><i class="fa fa-map-marker"></i> Directions</a>
+    </div>
+       <p></p>
+   <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://www.woodstockga.gov/index.aspx?NID=350"><i class="fa fa-star"></i> Website</a>
+       <a class="btn btn-default btn-sm" target = "_blank" href="http://www.singletracks.com/bike-trails/dupree-park.html"><i class="fa fa-bicycle"></i> Singletracks</a>  
+    </div>
+    <p></p>
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Dupree Park georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+        <a class="btn btn-default btn-sm" target = "_blank" href="https://www.youtube.com/results?search_query=Dupree Park georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+   </div>
+-->
+
+</div>
+<div class="hidden-xs col-sm-6">
+
+ <a target="_blank" href="http://maps.google.com/maps?daddr=513 Neese Road, Woodstock, GA 30188"><img border="0" src="https://maps.googleapis.com/maps/api/staticmap?maptype=terrain&center=513 Neese Road, Woodstock, GA 30188&markers=513 Neese Road, Woodstock, GA 30188&zoom=13&size=400x400" alt="Dupree Park"/></a>
+</div>
+</div>
+</div>
+
+
+
+      </script>
+  
+      <script type=text id='54d93953d4c6a60c6435b44e'>
+       
+<div style="margin-left: 10px; margin-right: 10px; margin-top: 10px;">
+<div class="row">
+<div class="col-xs-12 col-sm-6">
+      <!-- <h4 class="bg-primary" style="padding: 3px; border-radius: 3px;">
+          &nbsp;FATS
+      </h4> -->
+           
+                   <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar " 
+                            style="width: 300px; background-color: #006666;"><span class="barlabel" style="font-size: 18px;">FATS</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar bg-primary" style="width: 300px;"><span class="barlabel"><big>37</big> miles -Dedicated</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                        <div class="barContainer" style="width: 300px;">
+                            <div class="bar" style="background-color:#009933; width: 81px;"><span class="barlabel">&#9679;10</span></div>
+                            <div class="bar" style="background-color:#0033cc; width: 218px;"><span class="barlabel">&#9632;27</span></div>
+                            <div class="bar" style="background-color:#000000; width: 1px;"><span class="barlabel"></span></div>
+                        </div>
+                    </div>
+                    
+            <div style="width: 300px;">  
+            <br>
+              <p>37 miles of flowy trails</p>
+              <address>Woodlawn Road, Clarks Hill, SC 29821, United States</address>
+              <p>Sunrise until sunset unless otherwise posted</p>
+
+            <br>
+            
+            </div>
+           
+          <div class="colWrapper">
+            <div class="col-xs-6 text-center">
+                <div class="btn-group-vertical">
+                    <a class="btn btn-info" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=FATS georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+                    <a class="btn btn-info" target = "_blank" href="https://www.youtube.com/results?search_query=FATS georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+                      <a class="btn btn-info" target = "_blank" href="http://www.singletracks.com/bike-trails/forks-area-trail-system-fats.html"><i class="fa fa-bicycle"></i> Singletracks</a>
+                </div>
+
+            </div>        
+            <div class="col-xs-6 text-center">
+                  <div class="btn-group-vertical">
+                      <a class="btn btn-info" target="_blank" href="http://sorbacsra.org/Trails/FATS.htm"><i class="fa fa-star"></i> Website</a>
+                      <a class="btn btn-info" target="_blank" href="http://sorbacsra.org/images/Trail%20Maps/FATSAerialSmall.jpg"><i class="fa fa-compass"></i> Trail Map</a>
+                      <a class="btn btn-info" target= "_blank" href="http://maps.google.com/maps?daddr=Woodlawn Road, Clarks Hill, SC 29821, United States"><i class="fa fa-map-marker"></i> Directions</a>
+                  </div>
+            </div>
+            </div>
+            <!--
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://sorbacsra.org/images/Trail%20Maps/FATSAerialSmall.jpg"><i class="fa fa-compass"></i> Trail Map</a>
+        <a class="btn btn-default btn-sm" target= "_blank" href="http://maps.google.com/maps?daddr=Woodlawn Road, Clarks Hill, SC 29821, United States"><i class="fa fa-map-marker"></i> Directions</a>
+    </div>
+       <p></p>
+   <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://sorbacsra.org/Trails/FATS.htm"><i class="fa fa-star"></i> Website</a>
+       <a class="btn btn-default btn-sm" target = "_blank" href="http://www.singletracks.com/bike-trails/forks-area-trail-system-fats.html"><i class="fa fa-bicycle"></i> Singletracks</a>  
+    </div>
+    <p></p>
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=FATS georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+        <a class="btn btn-default btn-sm" target = "_blank" href="https://www.youtube.com/results?search_query=FATS georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+   </div>
+-->
+
+</div>
+<div class="hidden-xs col-sm-6">
+
+ <a target="_blank" href="http://maps.google.com/maps?daddr=Woodlawn Road, Clarks Hill, SC 29821, United States"><img border="0" src="https://maps.googleapis.com/maps/api/staticmap?maptype=terrain&center=Woodlawn Road, Clarks Hill, SC 29821, United States&markers=Woodlawn Road, Clarks Hill, SC 29821, United States&zoom=13&size=400x400" alt="FATS"/></a>
+</div>
+</div>
+</div>
+
+
+
+      </script>
+  
+      <script type=text id='5425cf0aedc6f122d7000007'>
+       
+<div style="margin-left: 10px; margin-right: 10px; margin-top: 10px;">
+<div class="row">
+<div class="col-xs-12 col-sm-6">
+      <!-- <h4 class="bg-primary" style="padding: 3px; border-radius: 3px;">
+          &nbsp;Fort Yargo
+      </h4> -->
+           
+                   <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar " 
+                            style="width: 300px; background-color: #330066;"><span class="barlabel" style="font-size: 18px;">Fort Yargo</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar bg-primary" style="width: 300px;"><span class="barlabel"><big>21</big> miles -Dedicated/Mixed Use</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                        <div class="barContainer" style="width: 300px;">
+                            <div class="bar" style="background-color:#009933; width: 114px;"><span class="barlabel">&#9679;8</span></div>
+                            <div class="bar" style="background-color:#0033cc; width: 157px;"><span class="barlabel">&#9632;11</span></div>
+                            <div class="bar" style="background-color:#000000; width: 29px;"><span class="barlabel">&diams;2</span></div>
+                        </div>
+                    </div>
+                    
+                        <div class="colWrapper">
+                           <div class="barContainer">
+                               <div class="bar bg-info" style="width: 300px;"><span class="barlabel">Night Riding</span></div>
+                            </div>
+                        </div>
+                    
+            <div style="width: 300px;">  
+            <br>
+              <p>Mileage includes multi-use trail (7 miles), dedicated MTB trail (13 miles), and a new 1 mile beginners loop.</p>
+              <address>210 S. Broad Street, Winder, GA 30680</address>
+              <p>Sunrise until 10 pm unless posted otherwise. Night riding allowed, must be out of the park by 10 pm.</p>
+
+            <br>
+            
+            </div>
+           
+          <div class="colWrapper">
+            <div class="col-xs-6 text-center">
+                <div class="btn-group-vertical">
+                    <a class="btn btn-info" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Fort Yargo georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+                    <a class="btn btn-info" target = "_blank" href="https://www.youtube.com/results?search_query=Fort Yargo georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+                      <a class="btn btn-info" target = "_blank" href="http://www.singletracks.com/bike-trails/fort-yargo-state-park.html"><i class="fa fa-bicycle"></i> Singletracks</a>
+                </div>
+
+            </div>        
+            <div class="col-xs-6 text-center">
+                  <div class="btn-group-vertical">
+                      <a class="btn btn-info" target="_blank" href="http://gastateparks.org/FortYargo-HikingBiking"><i class="fa fa-star"></i> Website</a>
+                      <a class="btn btn-info" target="_blank" href="http://gastateparks.org/content/Georgia/parks/trail_maps/FortYargo-Nov2012.pdf"><i class="fa fa-compass"></i> Trail Map</a>
+                      <a class="btn btn-info" target= "_blank" href="http://maps.google.com/maps?daddr=210 S. Broad Street, Winder, GA 30680"><i class="fa fa-map-marker"></i> Directions</a>
+                  </div>
+            </div>
+            </div>
+            <!--
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://gastateparks.org/content/Georgia/parks/trail_maps/FortYargo-Nov2012.pdf"><i class="fa fa-compass"></i> Trail Map</a>
+        <a class="btn btn-default btn-sm" target= "_blank" href="http://maps.google.com/maps?daddr=210 S. Broad Street, Winder, GA 30680"><i class="fa fa-map-marker"></i> Directions</a>
+    </div>
+       <p></p>
+   <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://gastateparks.org/FortYargo-HikingBiking"><i class="fa fa-star"></i> Website</a>
+       <a class="btn btn-default btn-sm" target = "_blank" href="http://www.singletracks.com/bike-trails/fort-yargo-state-park.html"><i class="fa fa-bicycle"></i> Singletracks</a>  
+    </div>
+    <p></p>
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Fort Yargo georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+        <a class="btn btn-default btn-sm" target = "_blank" href="https://www.youtube.com/results?search_query=Fort Yargo georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+   </div>
+-->
+
+</div>
+<div class="hidden-xs col-sm-6">
+
+ <a target="_blank" href="http://maps.google.com/maps?daddr=210 S. Broad Street, Winder, GA 30680"><img border="0" src="https://maps.googleapis.com/maps/api/staticmap?maptype=terrain&center=210 S. Broad Street, Winder, GA 30680&markers=210 S. Broad Street, Winder, GA 30680&zoom=13&size=400x400" alt="Fort Yargo"/></a>
+</div>
+</div>
+</div>
+
+
+
+      </script>
+  
+      <script type=text id='5425cf3eedc6f122d7000009'>
+       
+<div style="margin-left: 10px; margin-right: 10px; margin-top: 10px;">
+<div class="row">
+<div class="col-xs-12 col-sm-6">
+      <!-- <h4 class="bg-primary" style="padding: 3px; border-radius: 3px;">
+          &nbsp;George Pierce Park
+      </h4> -->
+           
+                   <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar " 
+                            style="width: 300px; background-color: #666600;"><span class="barlabel" style="font-size: 18px;">George Pierce Park</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar bg-primary" style="width: 300px;"><span class="barlabel"><big>4</big> miles -Mixed Use</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                        <div class="barContainer" style="width: 300px;">
+                            <div class="bar" style="background-color:#009933; width: 300px;"><span class="barlabel">&#9679;4</span></div>
+                            <div class="bar" style="background-color:#0033cc; width: 0px;"><span class="barlabel"></span></div>
+                            <div class="bar" style="background-color:#000000; width: 0px;"><span class="barlabel"></span></div>
+                        </div>
+                    </div>
+                    
+            <div style="width: 300px;">  
+            <br>
+              <p>Wide gravel trails, destination for a rainy day.</p>
+              <address>55 Buford Highway, Suwanee, GA 30024</address>
+              <p>Sunrise until sunset unless posted otherwise</p>
+
+            <br>
+            
+            </div>
+           
+          <div class="colWrapper">
+            <div class="col-xs-6 text-center">
+                <div class="btn-group-vertical">
+                    <a class="btn btn-info" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=George Pierce Park georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+                    <a class="btn btn-info" target = "_blank" href="https://www.youtube.com/results?search_query=George Pierce Park georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+                      <a class="btn btn-info" target = "_blank" href=""><i class="fa fa-bicycle"></i> Singletracks</a>
+                </div>
+
+            </div>        
+            <div class="col-xs-6 text-center">
+                  <div class="btn-group-vertical">
+                      <a class="btn btn-info" target="_blank" href="http://www.gwinnettcounty.com/portal/gwinnett/Departments/CommunityServices/ParksandRecreation/OurParksandFacilities/GuidetoYourParks/GeorgePiercePark"><i class="fa fa-star"></i> Website</a>
+                      <a class="btn btn-info" target="_blank" href="http://www.suwanee.com/pdfs/trailbikewaymap11-08.pdf"><i class="fa fa-compass"></i> Trail Map</a>
+                      <a class="btn btn-info" target= "_blank" href="http://maps.google.com/maps?daddr=55 Buford Highway, Suwanee, GA 30024"><i class="fa fa-map-marker"></i> Directions</a>
+                  </div>
+            </div>
+            </div>
+            <!--
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://www.suwanee.com/pdfs/trailbikewaymap11-08.pdf"><i class="fa fa-compass"></i> Trail Map</a>
+        <a class="btn btn-default btn-sm" target= "_blank" href="http://maps.google.com/maps?daddr=55 Buford Highway, Suwanee, GA 30024"><i class="fa fa-map-marker"></i> Directions</a>
+    </div>
+       <p></p>
+   <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://www.gwinnettcounty.com/portal/gwinnett/Departments/CommunityServices/ParksandRecreation/OurParksandFacilities/GuidetoYourParks/GeorgePiercePark"><i class="fa fa-star"></i> Website</a>
+       <a class="btn btn-default btn-sm" target = "_blank" href=""><i class="fa fa-bicycle"></i> Singletracks</a>  
+    </div>
+    <p></p>
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=George Pierce Park georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+        <a class="btn btn-default btn-sm" target = "_blank" href="https://www.youtube.com/results?search_query=George Pierce Park georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+   </div>
+-->
+
+</div>
+<div class="hidden-xs col-sm-6">
+
+ <a target="_blank" href="http://maps.google.com/maps?daddr=55 Buford Highway, Suwanee, GA 30024"><img border="0" src="https://maps.googleapis.com/maps/api/staticmap?maptype=terrain&center=55 Buford Highway, Suwanee, GA 30024&markers=55 Buford Highway, Suwanee, GA 30024&zoom=13&size=400x400" alt="George Pierce Park"/></a>
+</div>
+</div>
+</div>
+
+
+
+      </script>
+  
+      <script type=text id='5425cefaedc6f122d7000006'>
+       
+<div style="margin-left: 10px; margin-right: 10px; margin-top: 10px;">
+<div class="row">
+<div class="col-xs-12 col-sm-6">
+      <!-- <h4 class="bg-primary" style="padding: 3px; border-radius: 3px;">
+          &nbsp;Harbins Park
+      </h4> -->
+           
+                   <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar " 
+                            style="width: 300px; background-color: #660033;"><span class="barlabel" style="font-size: 18px;">Harbins Park</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar bg-primary" style="width: 300px;"><span class="barlabel"><big>13</big> miles -Dedicated</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                        <div class="barContainer" style="width: 300px;">
+                            <div class="bar" style="background-color:#009933; width: 92px;"><span class="barlabel">&#9679;4</span></div>
+                            <div class="bar" style="background-color:#0033cc; width: 184px;"><span class="barlabel">&#9632;8</span></div>
+                            <div class="bar" style="background-color:#000000; width: 24px;"><span class="barlabel">&diams;1</span></div>
+                        </div>
+                    </div>
+                    
+                        <div class="colWrapper">
+                           <div class="barContainer">
+                               <div class="bar bg-info" style="width: 300px;"><span class="barlabel">FreeRide</span></div>
+                            </div>
+                        </div>
+                    
+            <div style="width: 300px;">  
+            <br>
+              <p>Single-speed friendly trails, well marked.</p>
+              <address>2995 Luke Edwards Road, Dacula, GA 30019</address>
+              <p>Sunrise until sunset unless posted otherwise</p>
+
+            <br>
+            
+            </div>
+           
+          <div class="colWrapper">
+            <div class="col-xs-6 text-center">
+                <div class="btn-group-vertical">
+                    <a class="btn btn-info" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Harbins Park georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+                    <a class="btn btn-info" target = "_blank" href="https://www.youtube.com/results?search_query=Harbins Park georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+                      <a class="btn btn-info" target = "_blank" href="http://www.singletracks.com/bike-trails/harbins-park.html"><i class="fa fa-bicycle"></i> Singletracks</a>
+                </div>
+
+            </div>        
+            <div class="col-xs-6 text-center">
+                  <div class="btn-group-vertical">
+                      <a class="btn btn-info" target="_blank" href="http://www.gwinnettcounty.com/portal/gwinnett/Departments/CommunityServices/ParksandRecreation/OurParksandFacilities/GuidetoYourParks/HarbinsPark"><i class="fa fa-star"></i> Website</a>
+                      <a class="btn btn-info" target="_blank" href="http://www.gwinnettcounty.com/static/departments/communityservices/pdf/harbinspark_trailguide2.pdf"><i class="fa fa-compass"></i> Trail Map</a>
+                      <a class="btn btn-info" target= "_blank" href="http://maps.google.com/maps?daddr=2995 Luke Edwards Road, Dacula, GA 30019"><i class="fa fa-map-marker"></i> Directions</a>
+                  </div>
+            </div>
+            </div>
+            <!--
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://www.gwinnettcounty.com/static/departments/communityservices/pdf/harbinspark_trailguide2.pdf"><i class="fa fa-compass"></i> Trail Map</a>
+        <a class="btn btn-default btn-sm" target= "_blank" href="http://maps.google.com/maps?daddr=2995 Luke Edwards Road, Dacula, GA 30019"><i class="fa fa-map-marker"></i> Directions</a>
+    </div>
+       <p></p>
+   <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://www.gwinnettcounty.com/portal/gwinnett/Departments/CommunityServices/ParksandRecreation/OurParksandFacilities/GuidetoYourParks/HarbinsPark"><i class="fa fa-star"></i> Website</a>
+       <a class="btn btn-default btn-sm" target = "_blank" href="http://www.singletracks.com/bike-trails/harbins-park.html"><i class="fa fa-bicycle"></i> Singletracks</a>  
+    </div>
+    <p></p>
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Harbins Park georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+        <a class="btn btn-default btn-sm" target = "_blank" href="https://www.youtube.com/results?search_query=Harbins Park georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+   </div>
+-->
+
+</div>
+<div class="hidden-xs col-sm-6">
+
+ <a target="_blank" href="http://maps.google.com/maps?daddr=2995 Luke Edwards Road, Dacula, GA 30019"><img border="0" src="https://maps.googleapis.com/maps/api/staticmap?maptype=terrain&center=2995 Luke Edwards Road, Dacula, GA 30019&markers=2995 Luke Edwards Road, Dacula, GA 30019&zoom=13&size=400x400" alt="Harbins Park"/></a>
+</div>
+</div>
+</div>
+
+
+
+      </script>
+  
+      <script type=text id='5425d039edc6f122d7000017'>
+       
+<div style="margin-left: 10px; margin-right: 10px; margin-top: 10px;">
+<div class="row">
+<div class="col-xs-12 col-sm-6">
+      <!-- <h4 class="bg-primary" style="padding: 3px; border-radius: 3px;">
+          &nbsp;Hard Labor Creek
+      </h4> -->
+           
+                   <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar " 
+                            style="width: 300px; background-color: #006600;"><span class="barlabel" style="font-size: 18px;">Hard Labor Creek</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar bg-primary" style="width: 300px;"><span class="barlabel"><big>10</big> miles -Dedicated</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                        <div class="barContainer" style="width: 300px;">
+                            <div class="bar" style="background-color:#009933; width: 0px;"><span class="barlabel"></span></div>
+                            <div class="bar" style="background-color:#0033cc; width: 300px;"><span class="barlabel">&#9632;10</span></div>
+                            <div class="bar" style="background-color:#000000; width: 0px;"><span class="barlabel"></span></div>
+                        </div>
+                    </div>
+                    
+            <div style="width: 300px;">  
+            <br>
+              <p>State park biking.</p>
+              <address>5 Labor Creek Road, Rutledge, GA 30663</address>
+              <p>Sunrise until sunset unless posted otherwise</p>
+
+            <br>
+            
+            </div>
+           
+          <div class="colWrapper">
+            <div class="col-xs-6 text-center">
+                <div class="btn-group-vertical">
+                    <a class="btn btn-info" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Hard Labor Creek georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+                    <a class="btn btn-info" target = "_blank" href="https://www.youtube.com/results?search_query=Hard Labor Creek georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+                      <a class="btn btn-info" target = "_blank" href="http://www.singletracks.com/bike-trails/hard-labor-creek-state-park.html"><i class="fa fa-bicycle"></i> Singletracks</a>
+                </div>
+
+            </div>        
+            <div class="col-xs-6 text-center">
+                  <div class="btn-group-vertical">
+                      <a class="btn btn-info" target="_blank" href="http://gastateparks.org/HardLaborCreek"><i class="fa fa-star"></i> Website</a>
+                      <a class="btn btn-info" target="_blank" href="http://www.gastateparks.org/Content/Georgia/parks/trail_maps/HardLabor-2013.pdf"><i class="fa fa-compass"></i> Trail Map</a>
+                      <a class="btn btn-info" target= "_blank" href="http://maps.google.com/maps?daddr=5 Labor Creek Road, Rutledge, GA 30663"><i class="fa fa-map-marker"></i> Directions</a>
+                  </div>
+            </div>
+            </div>
+            <!--
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://www.gastateparks.org/Content/Georgia/parks/trail_maps/HardLabor-2013.pdf"><i class="fa fa-compass"></i> Trail Map</a>
+        <a class="btn btn-default btn-sm" target= "_blank" href="http://maps.google.com/maps?daddr=5 Labor Creek Road, Rutledge, GA 30663"><i class="fa fa-map-marker"></i> Directions</a>
+    </div>
+       <p></p>
+   <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://gastateparks.org/HardLaborCreek"><i class="fa fa-star"></i> Website</a>
+       <a class="btn btn-default btn-sm" target = "_blank" href="http://www.singletracks.com/bike-trails/hard-labor-creek-state-park.html"><i class="fa fa-bicycle"></i> Singletracks</a>  
+    </div>
+    <p></p>
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Hard Labor Creek georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+        <a class="btn btn-default btn-sm" target = "_blank" href="https://www.youtube.com/results?search_query=Hard Labor Creek georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+   </div>
+-->
+
+</div>
+<div class="hidden-xs col-sm-6">
+
+ <a target="_blank" href="http://maps.google.com/maps?daddr=5 Labor Creek Road, Rutledge, GA 30663"><img border="0" src="https://maps.googleapis.com/maps/api/staticmap?maptype=terrain&center=5 Labor Creek Road, Rutledge, GA 30663&markers=5 Labor Creek Road, Rutledge, GA 30663&zoom=13&size=400x400" alt="Hard Labor Creek"/></a>
+</div>
+</div>
+</div>
+
+
+
+      </script>
+  
+      <script type=text id='5425d047edc6f122d7000018'>
+       
+<div style="margin-left: 10px; margin-right: 10px; margin-top: 10px;">
+<div class="row">
+<div class="col-xs-12 col-sm-6">
+      <!-- <h4 class="bg-primary" style="padding: 3px; border-radius: 3px;">
+          &nbsp;Hart Farms/Corry House
+      </h4> -->
+           
+                   <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar " 
+                            style="width: 300px; background-color: #663300;"><span class="barlabel" style="font-size: 18px;">Hart Farms/Corry House</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar bg-primary" style="width: 300px;"><span class="barlabel"><big>21</big> miles -Dedicated</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                        <div class="barContainer" style="width: 300px;">
+                            <div class="bar" style="background-color:#009933; width: 0px;"><span class="barlabel"></span></div>
+                            <div class="bar" style="background-color:#0033cc; width: 300px;"><span class="barlabel">&#9632;21</span></div>
+                            <div class="bar" style="background-color:#000000; width: 0px;"><span class="barlabel"></span></div>
+                        </div>
+                    </div>
+                    
+            <div style="width: 300px;">  
+            <br>
+              <p>Challenging ride.</p>
+              <address>53 Crawfordville Road, Union Point,GA</address>
+              <p>Sunrise until sunset unless posted otherwise</p>
+
+            <br>
+            
+            </div>
+           
+          <div class="colWrapper">
+            <div class="col-xs-6 text-center">
+                <div class="btn-group-vertical">
+                    <a class="btn btn-info" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Hart Farms/Corry House georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+                    <a class="btn btn-info" target = "_blank" href="https://www.youtube.com/results?search_query=Hart Farms/Corry House georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+                      <a class="btn btn-info" target = "_blank" href="http://www.singletracks.com/bike-trails/hart-farm.html"><i class="fa fa-bicycle"></i> Singletracks</a>
+                </div>
+
+            </div>        
+            <div class="col-xs-6 text-center">
+                  <div class="btn-group-vertical">
+                      <a class="btn btn-info" target="_blank" href="http://www.hartcorrytrails.com/"><i class="fa fa-star"></i> Website</a>
+                      <a class="btn btn-info" target="_blank" href="http://www.hartcorrytrails.com/maps/"><i class="fa fa-compass"></i> Trail Map</a>
+                      <a class="btn btn-info" target= "_blank" href="http://maps.google.com/maps?daddr=53 Crawfordville Road, Union Point,GA"><i class="fa fa-map-marker"></i> Directions</a>
+                  </div>
+            </div>
+            </div>
+            <!--
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://www.hartcorrytrails.com/maps/"><i class="fa fa-compass"></i> Trail Map</a>
+        <a class="btn btn-default btn-sm" target= "_blank" href="http://maps.google.com/maps?daddr=53 Crawfordville Road, Union Point,GA"><i class="fa fa-map-marker"></i> Directions</a>
+    </div>
+       <p></p>
+   <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://www.hartcorrytrails.com/"><i class="fa fa-star"></i> Website</a>
+       <a class="btn btn-default btn-sm" target = "_blank" href="http://www.singletracks.com/bike-trails/hart-farm.html"><i class="fa fa-bicycle"></i> Singletracks</a>  
+    </div>
+    <p></p>
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Hart Farms/Corry House georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+        <a class="btn btn-default btn-sm" target = "_blank" href="https://www.youtube.com/results?search_query=Hart Farms/Corry House georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+   </div>
+-->
+
+</div>
+<div class="hidden-xs col-sm-6">
+
+ <a target="_blank" href="http://maps.google.com/maps?daddr=53 Crawfordville Road, Union Point,GA"><img border="0" src="https://maps.googleapis.com/maps/api/staticmap?maptype=terrain&center=53 Crawfordville Road, Union Point,GA&markers=53 Crawfordville Road, Union Point,GA&zoom=13&size=400x400" alt="Hart Farms/Corry House"/></a>
+</div>
+</div>
+</div>
+
+
+
+      </script>
+  
+      <script type=text id='5425cfa9edc6f122d700000c'>
+       
+<div style="margin-left: 10px; margin-right: 10px; margin-top: 10px;">
+<div class="row">
+<div class="col-xs-12 col-sm-6">
+      <!-- <h4 class="bg-primary" style="padding: 3px; border-radius: 3px;">
+          &nbsp;Haw Creek Park
+      </h4> -->
+           
+                   <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar " 
+                            style="width: 300px; background-color: #660033;"><span class="barlabel" style="font-size: 18px;">Haw Creek Park</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar bg-primary" style="width: 300px;"><span class="barlabel"><big>3</big> miles -Mixed Use</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                        <div class="barContainer" style="width: 300px;">
+                            <div class="bar" style="background-color:#009933; width: 200px;"><span class="barlabel">&#9679;2</span></div>
+                            <div class="bar" style="background-color:#0033cc; width: 100px;"><span class="barlabel">&#9632;1</span></div>
+                            <div class="bar" style="background-color:#000000; width: 0px;"><span class="barlabel"></span></div>
+                        </div>
+                    </div>
+                    
+            <div style="width: 300px;">  
+            <br>
+              <p>Fast, fun trails.  New intermediate trail added, and a pump track/skills area under construction.</p>
+              <address>2205 Echols Rd, Cumming, GA 30041</address>
+              <p>March - October: 6:00 AM - 9:30 PM, November - February 6:00 AM - 7:00 PM</p>
+
+            <br>
+            
+            </div>
+           
+          <div class="colWrapper">
+            <div class="col-xs-6 text-center">
+                <div class="btn-group-vertical">
+                    <a class="btn btn-info" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Haw Creek Park georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+                    <a class="btn btn-info" target = "_blank" href="https://www.youtube.com/results?search_query=Haw Creek Park georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+                      <a class="btn btn-info" target = "_blank" href="http://www.singletracks.com/bike-trails/haw-creek-park.html"><i class="fa fa-bicycle"></i> Singletracks</a>
+                </div>
+
+            </div>        
+            <div class="col-xs-6 text-center">
+                  <div class="btn-group-vertical">
+                      <a class="btn btn-info" target="_blank" href="http://www.rambo-mtb.org/haw-creek-park"><i class="fa fa-star"></i> Website</a>
+                      <a class="btn btn-info" target="_blank" href="maps/HawCreek.jpg"><i class="fa fa-compass"></i> Trail Map</a>
+                      <a class="btn btn-info" target= "_blank" href="http://maps.google.com/maps?daddr=2205 Echols Rd, Cumming, GA 30041"><i class="fa fa-map-marker"></i> Directions</a>
+                  </div>
+            </div>
+            </div>
+            <!--
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="maps/HawCreek.jpg"><i class="fa fa-compass"></i> Trail Map</a>
+        <a class="btn btn-default btn-sm" target= "_blank" href="http://maps.google.com/maps?daddr=2205 Echols Rd, Cumming, GA 30041"><i class="fa fa-map-marker"></i> Directions</a>
+    </div>
+       <p></p>
+   <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://www.rambo-mtb.org/haw-creek-park"><i class="fa fa-star"></i> Website</a>
+       <a class="btn btn-default btn-sm" target = "_blank" href="http://www.singletracks.com/bike-trails/haw-creek-park.html"><i class="fa fa-bicycle"></i> Singletracks</a>  
+    </div>
+    <p></p>
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Haw Creek Park georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+        <a class="btn btn-default btn-sm" target = "_blank" href="https://www.youtube.com/results?search_query=Haw Creek Park georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+   </div>
+-->
+
+</div>
+<div class="hidden-xs col-sm-6">
+
+ <a target="_blank" href="http://maps.google.com/maps?daddr=2205 Echols Rd, Cumming, GA 30041"><img border="0" src="https://maps.googleapis.com/maps/api/staticmap?maptype=terrain&center=2205 Echols Rd, Cumming, GA 30041&markers=2205 Echols Rd, Cumming, GA 30041&zoom=13&size=400x400" alt="Haw Creek Park"/></a>
+</div>
+</div>
+</div>
+
+
+
+      </script>
+  
+      <script type=text id='5425d02cedc6f122d7000016'>
+       
+<div style="margin-left: 10px; margin-right: 10px; margin-top: 10px;">
+<div class="row">
+<div class="col-xs-12 col-sm-6">
+      <!-- <h4 class="bg-primary" style="padding: 3px; border-radius: 3px;">
+          &nbsp;Heritage Park
+      </h4> -->
+           
+                   <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar " 
+                            style="width: 300px; background-color: #003366;"><span class="barlabel" style="font-size: 18px;">Heritage Park</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar bg-primary" style="width: 300px;"><span class="barlabel"><big>10</big> miles -Dedicated</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                        <div class="barContainer" style="width: 300px;">
+                            <div class="bar" style="background-color:#009933; width: 0px;"><span class="barlabel"></span></div>
+                            <div class="bar" style="background-color:#0033cc; width: 300px;"><span class="barlabel">&#9632;10</span></div>
+                            <div class="bar" style="background-color:#000000; width: 0px;"><span class="barlabel"></span></div>
+                        </div>
+                    </div>
+                    
+            <div style="width: 300px;">  
+            <br>
+              <p>Old school trails.</p>
+              <address>2543 Macon Hwy, Watkinsville, GA 30677</address>
+              <p>Sunrise until sunset unless posted otherwise</p>
+
+            <br>
+            
+            </div>
+           
+          <div class="colWrapper">
+            <div class="col-xs-6 text-center">
+                <div class="btn-group-vertical">
+                    <a class="btn btn-info" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Heritage Park georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+                    <a class="btn btn-info" target = "_blank" href="https://www.youtube.com/results?search_query=Heritage Park georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+                      <a class="btn btn-info" target = "_blank" href="http://www.singletracks.com/bike-trails/heritage-park.html"><i class="fa fa-bicycle"></i> Singletracks</a>
+                </div>
+
+            </div>        
+            <div class="col-xs-6 text-center">
+                  <div class="btn-group-vertical">
+                      <a class="btn btn-info" target="_blank" href="http://www.oconeecounty.com/ocprd/index.php/oconee-parks-2/15-general/75-heritage-park"><i class="fa fa-star"></i> Website</a>
+                      <a class="btn btn-info" target="_blank" href="http://www.oconeecounty.com/ocprd/images/HPTrails.pdf"><i class="fa fa-compass"></i> Trail Map</a>
+                      <a class="btn btn-info" target= "_blank" href="http://maps.google.com/maps?daddr=2543 Macon Hwy, Watkinsville, GA 30677"><i class="fa fa-map-marker"></i> Directions</a>
+                  </div>
+            </div>
+            </div>
+            <!--
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://www.oconeecounty.com/ocprd/images/HPTrails.pdf"><i class="fa fa-compass"></i> Trail Map</a>
+        <a class="btn btn-default btn-sm" target= "_blank" href="http://maps.google.com/maps?daddr=2543 Macon Hwy, Watkinsville, GA 30677"><i class="fa fa-map-marker"></i> Directions</a>
+    </div>
+       <p></p>
+   <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://www.oconeecounty.com/ocprd/index.php/oconee-parks-2/15-general/75-heritage-park"><i class="fa fa-star"></i> Website</a>
+       <a class="btn btn-default btn-sm" target = "_blank" href="http://www.singletracks.com/bike-trails/heritage-park.html"><i class="fa fa-bicycle"></i> Singletracks</a>  
+    </div>
+    <p></p>
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Heritage Park georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+        <a class="btn btn-default btn-sm" target = "_blank" href="https://www.youtube.com/results?search_query=Heritage Park georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+   </div>
+-->
+
+</div>
+<div class="hidden-xs col-sm-6">
+
+ <a target="_blank" href="http://maps.google.com/maps?daddr=2543 Macon Hwy, Watkinsville, GA 30677"><img border="0" src="https://maps.googleapis.com/maps/api/staticmap?maptype=terrain&center=2543 Macon Hwy, Watkinsville, GA 30677&markers=2543 Macon Hwy, Watkinsville, GA 30677&zoom=13&size=400x400" alt="Heritage Park"/></a>
+</div>
+</div>
+</div>
+
+
+
+      </script>
+  
+      <script type=text id='542dcc01b87b9ee238000001'>
+       
+<div style="margin-left: 10px; margin-right: 10px; margin-top: 10px;">
+<div class="row">
+<div class="col-xs-12 col-sm-6">
+      <!-- <h4 class="bg-primary" style="padding: 3px; border-radius: 3px;">
+          &nbsp;Iron Hill Trail (Red Top Mtn)
+      </h4> -->
+           
+                   <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar " 
+                            style="width: 300px; background-color: #666600;"><span class="barlabel" style="font-size: 18px;">Iron Hill Trail (Red Top Mtn)</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar bg-primary" style="width: 300px;"><span class="barlabel"><big>4</big> miles -Mixed Use</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                        <div class="barContainer" style="width: 300px;">
+                            <div class="bar" style="background-color:#009933; width: 300px;"><span class="barlabel">&#9679;4</span></div>
+                            <div class="bar" style="background-color:#0033cc; width: 0px;"><span class="barlabel"></span></div>
+                            <div class="bar" style="background-color:#000000; width: 0px;"><span class="barlabel"></span></div>
+                        </div>
+                    </div>
+                    
+            <div style="width: 300px;">  
+            <br>
+              <p>Located in Red Top Mtn State Park, this 4 mile gravel loop is ideal for beginners or a quick ride.</p>
+              <address>50 Lodge Rd SE, Cartersville, GA 30121</address>
+              <p>Sunrise until sunset unless posted otherwise.  Biking on other trails is not permitted.</p>
+
+            <br>
+            
+            </div>
+           
+          <div class="colWrapper">
+            <div class="col-xs-6 text-center">
+                <div class="btn-group-vertical">
+                    <a class="btn btn-info" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Iron Hill Trail (Red Top Mtn) georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+                    <a class="btn btn-info" target = "_blank" href="https://www.youtube.com/results?search_query=Iron Hill Trail (Red Top Mtn) georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+                      <a class="btn btn-info" target = "_blank" href="http://www.singletracks.com/bike-trails/iron-hills-trail-red-top-mtn-state-park.html"><i class="fa fa-bicycle"></i> Singletracks</a>
+                </div>
+
+            </div>        
+            <div class="col-xs-6 text-center">
+                  <div class="btn-group-vertical">
+                      <a class="btn btn-info" target="_blank" href="http://trails.mtbr.com/cat/united-states-trails/trails-georgia/trail/iron-hill-trail/prd_368023_4541crx.aspx"><i class="fa fa-star"></i> Website</a>
+                      <a class="btn btn-info" target="_blank" href="http://www.redtopmountainstatepark.org/resources/red-top-mountain-state-park-trail-map.pdf"><i class="fa fa-compass"></i> Trail Map</a>
+                      <a class="btn btn-info" target= "_blank" href="http://maps.google.com/maps?daddr=50 Lodge Rd SE, Cartersville, GA 30121"><i class="fa fa-map-marker"></i> Directions</a>
+                  </div>
+            </div>
+            </div>
+            <!--
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://www.redtopmountainstatepark.org/resources/red-top-mountain-state-park-trail-map.pdf"><i class="fa fa-compass"></i> Trail Map</a>
+        <a class="btn btn-default btn-sm" target= "_blank" href="http://maps.google.com/maps?daddr=50 Lodge Rd SE, Cartersville, GA 30121"><i class="fa fa-map-marker"></i> Directions</a>
+    </div>
+       <p></p>
+   <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://trails.mtbr.com/cat/united-states-trails/trails-georgia/trail/iron-hill-trail/prd_368023_4541crx.aspx"><i class="fa fa-star"></i> Website</a>
+       <a class="btn btn-default btn-sm" target = "_blank" href="http://www.singletracks.com/bike-trails/iron-hills-trail-red-top-mtn-state-park.html"><i class="fa fa-bicycle"></i> Singletracks</a>  
+    </div>
+    <p></p>
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Iron Hill Trail (Red Top Mtn) georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+        <a class="btn btn-default btn-sm" target = "_blank" href="https://www.youtube.com/results?search_query=Iron Hill Trail (Red Top Mtn) georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+   </div>
+-->
+
+</div>
+<div class="hidden-xs col-sm-6">
+
+ <a target="_blank" href="http://maps.google.com/maps?daddr=50 Lodge Rd SE, Cartersville, GA 30121"><img border="0" src="https://maps.googleapis.com/maps/api/staticmap?maptype=terrain&center=50 Lodge Rd SE, Cartersville, GA 30121&markers=50 Lodge Rd SE, Cartersville, GA 30121&zoom=13&size=400x400" alt="Iron Hill Trail (Red Top Mtn)"/></a>
+</div>
+</div>
+</div>
+
+
+
+      </script>
+  
+      <script type=text id='5425cfe7edc6f122d7000010'>
+       
+<div style="margin-left: 10px; margin-right: 10px; margin-top: 10px;">
+<div class="row">
+<div class="col-xs-12 col-sm-6">
+      <!-- <h4 class="bg-primary" style="padding: 3px; border-radius: 3px;">
+          &nbsp;Jackrabbit Mountain - CLOSED
+      </h4> -->
+           
+                   <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar bg-warning" 
+                            style="width: 300px; "><span class="barlabel" style="font-size: 18px;">Jackrabbit Mountain - CLOSED</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar bg-primary" style="width: 300px;"><span class="barlabel"><big>15</big> miles -Mixed Use</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                        <div class="barContainer" style="width: 300px;">
+                            <div class="bar" style="background-color:#009933; width: 240px;"><span class="barlabel">&#9679;12</span></div>
+                            <div class="bar" style="background-color:#0033cc; width: 60px;"><span class="barlabel">&#9632;3</span></div>
+                            <div class="bar" style="background-color:#000000; width: 0px;"><span class="barlabel"></span></div>
+                        </div>
+                    </div>
+                    
+            <div style="width: 300px;">  
+            <br>
+              <p>Single-speed friendly trails.</p>
+              <address>Jackrabbit Campground, Hayesville, NC 28904</address>
+              <p>Open May 1 - September 30</p>
+
+            <br>
+            
+            </div>
+           
+          <div class="colWrapper">
+            <div class="col-xs-6 text-center">
+                <div class="btn-group-vertical">
+                    <a class="btn btn-info" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Jackrabbit Mountain georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+                    <a class="btn btn-info" target = "_blank" href="https://www.youtube.com/results?search_query=Jackrabbit Mountain georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+                      <a class="btn btn-info" target = "_blank" href="http://www.singletracks.com/bike-trails/jack-rabbit-trails.html"><i class="fa fa-bicycle"></i> Singletracks</a>
+                </div>
+
+            </div>        
+            <div class="col-xs-6 text-center">
+                  <div class="btn-group-vertical">
+                      <a class="btn btn-info" target="_blank" href="http://sabacycling.com/jackrabbit.shtml"><i class="fa fa-star"></i> Website</a>
+                      <a class="btn btn-info" target="_blank" href="http://www.sabacycling.com/jackrabbit-trail-map.pdf"><i class="fa fa-compass"></i> Trail Map</a>
+                      <a class="btn btn-info" target= "_blank" href="http://maps.google.com/maps?daddr=Jackrabbit Campground, Hayesville, NC 28904"><i class="fa fa-map-marker"></i> Directions</a>
+                  </div>
+            </div>
+            </div>
+            <!--
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://www.sabacycling.com/jackrabbit-trail-map.pdf"><i class="fa fa-compass"></i> Trail Map</a>
+        <a class="btn btn-default btn-sm" target= "_blank" href="http://maps.google.com/maps?daddr=Jackrabbit Campground, Hayesville, NC 28904"><i class="fa fa-map-marker"></i> Directions</a>
+    </div>
+       <p></p>
+   <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://sabacycling.com/jackrabbit.shtml"><i class="fa fa-star"></i> Website</a>
+       <a class="btn btn-default btn-sm" target = "_blank" href="http://www.singletracks.com/bike-trails/jack-rabbit-trails.html"><i class="fa fa-bicycle"></i> Singletracks</a>  
+    </div>
+    <p></p>
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Jackrabbit Mountain georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+        <a class="btn btn-default btn-sm" target = "_blank" href="https://www.youtube.com/results?search_query=Jackrabbit Mountain georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+   </div>
+-->
+
+</div>
+<div class="hidden-xs col-sm-6">
+
+ <a target="_blank" href="http://maps.google.com/maps?daddr=Jackrabbit Campground, Hayesville, NC 28904"><img border="0" src="https://maps.googleapis.com/maps/api/staticmap?maptype=terrain&center=Jackrabbit Campground, Hayesville, NC 28904&markers=Jackrabbit Campground, Hayesville, NC 28904&zoom=13&size=400x400" alt="Jackrabbit Mountain"/></a>
+</div>
+</div>
+</div>
+
+
+
+      </script>
+  
+      <script type=text id='5425cfd6edc6f122d700000f'>
+       
+<div style="margin-left: 10px; margin-right: 10px; margin-top: 10px;">
+<div class="row">
+<div class="col-xs-12 col-sm-6">
+      <!-- <h4 class="bg-primary" style="padding: 3px; border-radius: 3px;">
+          &nbsp;Mt. Adams
+      </h4> -->
+           
+                   <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar " 
+                            style="width: 300px; background-color: #663300;"><span class="barlabel" style="font-size: 18px;">Mt. Adams</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar bg-primary" style="width: 300px;"><span class="barlabel"><big>1</big> miles -Mixed Use</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                        <div class="barContainer" style="width: 300px;">
+                            <div class="bar" style="background-color:#009933; width: 0px;"><span class="barlabel"></span></div>
+                            <div class="bar" style="background-color:#0033cc; width: 300px;"><span class="barlabel">&#9632;1</span></div>
+                            <div class="bar" style="background-color:#000000; width: 0px;"><span class="barlabel"></span></div>
+                        </div>
+                    </div>
+                    
+            <div style="width: 300px;">  
+            <br>
+              <p>Short trail off of the paved greenway.</p>
+              <address>3655 Preston Ridge Rd, Alpharetta, GA 30005</address>
+              <p>Sunrise until sunset unless posted otherwise</p>
+
+            <br>
+            
+            </div>
+           
+          <div class="colWrapper">
+            <div class="col-xs-6 text-center">
+                <div class="btn-group-vertical">
+                    <a class="btn btn-info" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Mt. Adams georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+                    <a class="btn btn-info" target = "_blank" href="https://www.youtube.com/results?search_query=Mt. Adams georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+                      <a class="btn btn-info" target = "_blank" href=""><i class="fa fa-bicycle"></i> Singletracks</a>
+                </div>
+
+            </div>        
+            <div class="col-xs-6 text-center">
+                  <div class="btn-group-vertical">
+                      <a class="btn btn-info" target="_blank" href="http://www.rambo-mtb.org/mt-adams"><i class="fa fa-star"></i> Website</a>
+                      <a class="btn btn-info" target="_blank" href="http://www.rambo-mtb.org/s/mtadams.gif"><i class="fa fa-compass"></i> Trail Map</a>
+                      <a class="btn btn-info" target= "_blank" href="http://maps.google.com/maps?daddr=3655 Preston Ridge Rd, Alpharetta, GA 30005"><i class="fa fa-map-marker"></i> Directions</a>
+                  </div>
+            </div>
+            </div>
+            <!--
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://www.rambo-mtb.org/s/mtadams.gif"><i class="fa fa-compass"></i> Trail Map</a>
+        <a class="btn btn-default btn-sm" target= "_blank" href="http://maps.google.com/maps?daddr=3655 Preston Ridge Rd, Alpharetta, GA 30005"><i class="fa fa-map-marker"></i> Directions</a>
+    </div>
+       <p></p>
+   <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://www.rambo-mtb.org/mt-adams"><i class="fa fa-star"></i> Website</a>
+       <a class="btn btn-default btn-sm" target = "_blank" href=""><i class="fa fa-bicycle"></i> Singletracks</a>  
+    </div>
+    <p></p>
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Mt. Adams georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+        <a class="btn btn-default btn-sm" target = "_blank" href="https://www.youtube.com/results?search_query=Mt. Adams georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+   </div>
+-->
+
+</div>
+<div class="hidden-xs col-sm-6">
+
+ <a target="_blank" href="http://maps.google.com/maps?daddr=3655 Preston Ridge Rd, Alpharetta, GA 30005"><img border="0" src="https://maps.googleapis.com/maps/api/staticmap?maptype=terrain&center=3655 Preston Ridge Rd, Alpharetta, GA 30005&markers=3655 Preston Ridge Rd, Alpharetta, GA 30005&zoom=13&size=400x400" alt="Mt. Adams"/></a>
+</div>
+</div>
+</div>
+
+
+
+      </script>
+  
+      <script type=text id='5425d007edc6f122d7000013'>
+       
+<div style="margin-left: 10px; margin-right: 10px; margin-top: 10px;">
+<div class="row">
+<div class="col-xs-12 col-sm-6">
+      <!-- <h4 class="bg-primary" style="padding: 3px; border-radius: 3px;">
+          &nbsp;Mt. Tabor MTB Park
+      </h4> -->
+           
+                   <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar " 
+                            style="width: 300px; background-color: #000066;"><span class="barlabel" style="font-size: 18px;">Mt. Tabor MTB Park</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar bg-primary" style="width: 300px;"><span class="barlabel"><big>8</big> miles -Dedicated</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                        <div class="barContainer" style="width: 300px;">
+                            <div class="bar" style="background-color:#009933; width: 0px;"><span class="barlabel"></span></div>
+                            <div class="bar" style="background-color:#0033cc; width: 150px;"><span class="barlabel">&#9632;4</span></div>
+                            <div class="bar" style="background-color:#000000; width: 150px;"><span class="barlabel">&diams;4</span></div>
+                        </div>
+                    </div>
+                    
+            <div style="width: 300px;">  
+            <br>
+              <p>3 trails in stacked loop formation.</p>
+              <address>1550 E. Paulding Dr, Dallas, GA 30157</address>
+              <p>Sunrise until sunset unless posted otherwise</p>
+
+            <br>
+            
+            </div>
+           
+          <div class="colWrapper">
+            <div class="col-xs-6 text-center">
+                <div class="btn-group-vertical">
+                    <a class="btn btn-info" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Mt. Tabor MTB Park georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+                    <a class="btn btn-info" target = "_blank" href="https://www.youtube.com/results?search_query=Mt. Tabor MTB Park georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+                      <a class="btn btn-info" target = "_blank" href="http://www.singletracks.com/bike-trails/mt-tabor-park.html"><i class="fa fa-bicycle"></i> Singletracks</a>
+                </div>
+
+            </div>        
+            <div class="col-xs-6 text-center">
+                  <div class="btn-group-vertical">
+                      <a class="btn btn-info" target="_blank" href="http://imba-westga.org/locations-of-interest/detail/3/1/mt-tabor-mountain-bike-park"><i class="fa fa-star"></i> Website</a>
+                      <a class="btn btn-info" target="_blank" href="http://imba-westga.org/images/trails/TaborTrlsMobileMap.pdf"><i class="fa fa-compass"></i> Trail Map</a>
+                      <a class="btn btn-info" target= "_blank" href="http://maps.google.com/maps?daddr=1550 E. Paulding Dr, Dallas, GA 30157"><i class="fa fa-map-marker"></i> Directions</a>
+                  </div>
+            </div>
+            </div>
+            <!--
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://imba-westga.org/images/trails/TaborTrlsMobileMap.pdf"><i class="fa fa-compass"></i> Trail Map</a>
+        <a class="btn btn-default btn-sm" target= "_blank" href="http://maps.google.com/maps?daddr=1550 E. Paulding Dr, Dallas, GA 30157"><i class="fa fa-map-marker"></i> Directions</a>
+    </div>
+       <p></p>
+   <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://imba-westga.org/locations-of-interest/detail/3/1/mt-tabor-mountain-bike-park"><i class="fa fa-star"></i> Website</a>
+       <a class="btn btn-default btn-sm" target = "_blank" href="http://www.singletracks.com/bike-trails/mt-tabor-park.html"><i class="fa fa-bicycle"></i> Singletracks</a>  
+    </div>
+    <p></p>
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Mt. Tabor MTB Park georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+        <a class="btn btn-default btn-sm" target = "_blank" href="https://www.youtube.com/results?search_query=Mt. Tabor MTB Park georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+   </div>
+-->
+
+</div>
+<div class="hidden-xs col-sm-6">
+
+ <a target="_blank" href="http://maps.google.com/maps?daddr=1550 E. Paulding Dr, Dallas, GA 30157"><img border="0" src="https://maps.googleapis.com/maps/api/staticmap?maptype=terrain&center=1550 E. Paulding Dr, Dallas, GA 30157&markers=1550 E. Paulding Dr, Dallas, GA 30157&zoom=13&size=400x400" alt="Mt. Tabor MTB Park"/></a>
+</div>
+</div>
+</div>
+
+
+
+      </script>
+  
+      <script type=text id='5425cf31edc6f122d7000008'>
+       
+<div style="margin-left: 10px; margin-right: 10px; margin-top: 10px;">
+<div class="row">
+<div class="col-xs-12 col-sm-6">
+      <!-- <h4 class="bg-primary" style="padding: 3px; border-radius: 3px;">
+          &nbsp;Paynes Creek Park - CLOSED
+      </h4> -->
+           
+                   <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar bg-warning" 
+                            style="width: 300px; "><span class="barlabel" style="font-size: 18px;">Paynes Creek Park - CLOSED</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar bg-primary" style="width: 300px;"><span class="barlabel"><big>10</big> miles -Dedicated</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                        <div class="barContainer" style="width: 300px;">
+                            <div class="bar" style="background-color:#009933; width: 0px;"><span class="barlabel"></span></div>
+                            <div class="bar" style="background-color:#0033cc; width: 300px;"><span class="barlabel">&#9632;10</span></div>
+                            <div class="bar" style="background-color:#000000; width: 0px;"><span class="barlabel"></span></div>
+                        </div>
+                    </div>
+                    
+            <div style="width: 300px;">  
+            <br>
+              <p>Super wide and fast.</p>
+              <address>518 Ramp Road, Hartwell, GA 30643</address>
+              <p>Open May 1 - September 7</p>
+
+            <br>
+            
+            </div>
+           
+          <div class="colWrapper">
+            <div class="col-xs-6 text-center">
+                <div class="btn-group-vertical">
+                    <a class="btn btn-info" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Paynes Creek Park georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+                    <a class="btn btn-info" target = "_blank" href="https://www.youtube.com/results?search_query=Paynes Creek Park georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+                      <a class="btn btn-info" target = "_blank" href="http://www.singletracks.com/bike-trails/paynes-creek-campground-trails.html"><i class="fa fa-bicycle"></i> Singletracks</a>
+                </div>
+
+            </div>        
+            <div class="col-xs-6 text-center">
+                  <div class="btn-group-vertical">
+                      <a class="btn btn-info" target="_blank" href="http://www.recreation.gov/campgroundDetails.do?contractCode=NRSO&amp;parkId=71344"><i class="fa fa-star"></i> Website</a>
+                      <a class="btn btn-info" target="_blank" href="https://docs.google.com/file/d/0BytldVSawdf4NjRhODgxMzQtZTFkZS00YzUzLTg1NGEtYTI0NzQ5NmI4ZjJj/edit"><i class="fa fa-compass"></i> Trail Map</a>
+                      <a class="btn btn-info" target= "_blank" href="http://maps.google.com/maps?daddr=518 Ramp Road, Hartwell, GA 30643"><i class="fa fa-map-marker"></i> Directions</a>
+                  </div>
+            </div>
+            </div>
+            <!--
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="https://docs.google.com/file/d/0BytldVSawdf4NjRhODgxMzQtZTFkZS00YzUzLTg1NGEtYTI0NzQ5NmI4ZjJj/edit"><i class="fa fa-compass"></i> Trail Map</a>
+        <a class="btn btn-default btn-sm" target= "_blank" href="http://maps.google.com/maps?daddr=518 Ramp Road, Hartwell, GA 30643"><i class="fa fa-map-marker"></i> Directions</a>
+    </div>
+       <p></p>
+   <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://www.recreation.gov/campgroundDetails.do?contractCode=NRSO&amp;parkId=71344"><i class="fa fa-star"></i> Website</a>
+       <a class="btn btn-default btn-sm" target = "_bl</a" href="http://www.singletracks.com/bike-trails/paynes-creek-campground-trails.html"><i class="fa fa-bicycle"></i> Singletracks</a>  
+    </div>
+    <p></p>
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Paynes Creek Park georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+        <a class="btn btn-default btn-sm" target = "_blank" href="https://www.youtube.com/results?search_query=Paynes Creek Park georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+   </div>
+-->
+
+</div>
+<div class="hidden-xs col-sm-6">
+
+ <a target="_blank" href="http://maps.google.com/maps?daddr=518 Ramp Road, Hartwell, GA 30643"><img border="0" src="https://maps.googleapis.com/maps/api/staticmap?maptype=terrain&center=518 Ramp Road, Hartwell, GA 30643&markers=518 Ramp Road, Hartwell, GA 30643&zoom=13&size=400x400" alt="Paynes Creek Park"/></a>
+</div>
+</div>
+</div>
+
+
+
+      </script>
+  
+      <script type=text id='54d945a7d4c6a60c6435b452'>
+       
+<div style="margin-left: 10px; margin-right: 10px; margin-top: 10px;">
+<div class="row">
+<div class="col-xs-12 col-sm-6">
+      <!-- <h4 class="bg-primary" style="padding: 3px; border-radius: 3px;">
+          &nbsp;Pinhoti/Mulberry Gap
+      </h4> -->
+           
+                   <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar " 
+                            style="width: 300px; background-color: #000066;"><span class="barlabel" style="font-size: 18px;">Pinhoti/Mulberry Gap</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar bg-primary" style="width: 300px;"><span class="barlabel"><big>80</big> miles -Mixed Use</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                        <div class="barContainer" style="width: 300px;">
+                            <div class="bar" style="background-color:#009933; width: 0px;"><span class="barlabel"></span></div>
+                            <div class="bar" style="background-color:#0033cc; width: 300px;"><span class="barlabel">&#9632;80</span></div>
+                            <div class="bar" style="background-color:#000000; width: 0px;"><span class="barlabel"></span></div>
+                        </div>
+                    </div>
+                    
+            <div style="width: 300px;">  
+            <br>
+              <p>Mulberry Gap&#39;s site is a good entrance to Pinhoti and Bear Gap trails.  Mileage is an estimate.</p>
+              <address>Conasauga Rd., Ellijay, GA 30540</address>
+              <p>Hours vary</p>
+
+            <br>
+            
+            </div>
+           
+          <div class="colWrapper">
+            <div class="col-xs-6 text-center">
+                <div class="btn-group-vertical">
+                    <a class="btn btn-info" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Pinhoti/Mulberry Gap georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+                    <a class="btn btn-info" target = "_blank" href="https://www.youtube.com/results?search_query=Pinhoti/Mulberry Gap georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+                      <a class="btn btn-info" target = "_blank" href=""><i class="fa fa-bicycle"></i> Singletracks</a>
+                </div>
+
+            </div>        
+            <div class="col-xs-6 text-center">
+                  <div class="btn-group-vertical">
+                      <a class="btn btn-info" target="_blank" href="http://mulberrygap.net/"><i class="fa fa-star"></i> Website</a>
+                      <a class="btn btn-info" target="_blank" href="http://mulberrygap.net/mountain-biking-2/pinhoti-mountaintown-creek/"><i class="fa fa-compass"></i> Trail Map</a>
+                      <a class="btn btn-info" target= "_blank" href="http://maps.google.com/maps?daddr=Conasauga Rd., Ellijay, GA 30540"><i class="fa fa-map-marker"></i> Directions</a>
+                  </div>
+            </div>
+            </div>
+            <!--
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://mulberrygap.net/mountain-biking-2/pinhoti-mountaintown-creek/"><i class="fa fa-compass"></i> Trail Map</a>
+        <a class="btn btn-default btn-sm" target= "_blank" href="http://maps.google.com/maps?daddr=Conasauga Rd., Ellijay, GA 30540"><i class="fa fa-map-marker"></i> Directions</a>
+    </div>
+       <p></p>
+   <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://mulberrygap.net/"><i class="fa fa-star"></i> Website</a>
+       <a class="btn btn-default btn-sm" target = "_blank" href=""><i class="fa fa-bicycle"></i> Singletracks</a>  
+    </div>
+    <p></p>
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Pinhoti/Mulberry Gap georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+        <a class="btn btn-default btn-sm" target = "_blank" href="https://www.youtube.com/results?search_query=Pinhoti/Mulberry Gap georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+   </div>
+-->
+
+</div>
+<div class="hidden-xs col-sm-6">
+
+ <a target="_blank" href="http://maps.google.com/maps?daddr=Conasauga Rd., Ellijay, GA 30540"><img border="0" src="https://maps.googleapis.com/maps/api/staticmap?maptype=terrain&center=Conasauga Rd., Ellijay, GA 30540&markers=Conasauga Rd., Ellijay, GA 30540&zoom=13&size=400x400" alt="Pinhoti/Mulberry Gap"/></a>
+</div>
+</div>
+</div>
+
+
+
+      </script>
+  
+      <script type=text id='5425d01fedc6f122d7000015'>
+       
+<div style="margin-left: 10px; margin-right: 10px; margin-top: 10px;">
+<div class="row">
+<div class="col-xs-12 col-sm-6">
+      <!-- <h4 class="bg-primary" style="padding: 3px; border-radius: 3px;">
+          &nbsp;Rope Mill Park
+      </h4> -->
+           
+                   <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar " 
+                            style="width: 300px; background-color: #006633;"><span class="barlabel" style="font-size: 18px;">Rope Mill Park</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar bg-primary" style="width: 300px;"><span class="barlabel"><big>9</big> miles -Dedicated</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                        <div class="barContainer" style="width: 300px;">
+                            <div class="bar" style="background-color:#009933; width: 33px;"><span class="barlabel">&#9679;1</span></div>
+                            <div class="bar" style="background-color:#0033cc; width: 266px;"><span class="barlabel">&#9632;8</span></div>
+                            <div class="bar" style="background-color:#000000; width: 1px;"><span class="barlabel"></span></div>
+                        </div>
+                    </div>
+                    
+            <div style="width: 300px;">  
+            <br>
+              <p>A new trail is coming soon.</p>
+              <address>690 Rope Mill Road, Woodstock, GA 30188</address>
+              <p>7am - 11pm</p>
+
+            <br>
+            
+            </div>
+           
+          <div class="colWrapper">
+            <div class="col-xs-6 text-center">
+                <div class="btn-group-vertical">
+                    <a class="btn btn-info" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Rope Mill Park georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+                    <a class="btn btn-info" target = "_blank" href="https://www.youtube.com/results?search_query=Rope Mill Park georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+                      <a class="btn btn-info" target = "_blank" href="http://www.singletracks.com/.../taylor-randahl-memorial-mountain-bike-trails-at- olde-rope-mill-park.html"><i class="fa fa-bicycle"></i> Singletracks</a>
+                </div>
+
+            </div>        
+            <div class="col-xs-6 text-center">
+                  <div class="btn-group-vertical">
+                      <a class="btn btn-info" target="_blank" href="http://sorbawoodstock.org/olde-rope-mill-park/"><i class="fa fa-star"></i> Website</a>
+                      <a class="btn btn-info" target="_blank" href="http://sorbawoodstock.org/s/TRMBT-Trail-Map.pdf"><i class="fa fa-compass"></i> Trail Map</a>
+                      <a class="btn btn-info" target= "_blank" href="http://maps.google.com/maps?daddr=690 Rope Mill Road, Woodstock, GA 30188"><i class="fa fa-map-marker"></i> Directions</a>
+                  </div>
+            </div>
+            </div>
+            <!--
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://sorbawoodstock.org/s/TRMBT-Trail-Map.pdf"><i class="fa fa-compass"></i> Trail Map</a>
+        <a class="btn btn-default btn-sm" target= "_blank" href="http://maps.google.com/maps?daddr=690 Rope Mill Road, Woodstock, GA 30188"><i class="fa fa-map-marker"></i> Directions</a>
+    </div>
+       <p></p>
+   <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://sorbawoodstock.org/olde-rope-mill-park/"><i class="fa fa-star"></i> Website</a>
+       <a class="btn btn-default btn-sm" target = "_blank" href="http://www.singletracks.com/.../taylor-randahl-memorial-mountain-bike-trails-at- olde-rope-mill-park.html"><i class="fa fa-bicycle"></i> Singletracks</a>  
+    </div>
+    <p></p>
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Rope Mill Park georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+        <a class="btn btn-default btn-sm" target = "_blank" href="https://www.youtube.com/results?search_query=Rope Mill Park georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+   </div>
+-->
+
+</div>
+<div class="hidden-xs col-sm-6">
+
+ <a target="_blank" href="http://maps.google.com/maps?daddr=690 Rope Mill Road, Woodstock, GA 30188"><img border="0" src="https://maps.googleapis.com/maps/api/staticmap?maptype=terrain&center=690 Rope Mill Road, Woodstock, GA 30188&markers=690 Rope Mill Road, Woodstock, GA 30188&zoom=13&size=400x400" alt="Rope Mill Park"/></a>
+</div>
+</div>
+</div>
+
+
+
+      </script>
+  
+      <script type=text id='542de0e0d64e846148000001'>
+       
+<div style="margin-left: 10px; margin-right: 10px; margin-top: 10px;">
+<div class="row">
+<div class="col-xs-12 col-sm-6">
+      <!-- <h4 class="bg-primary" style="padding: 3px; border-radius: 3px;">
+          &nbsp;Silver Comet Side Trail
+      </h4> -->
+           
+                   <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar " 
+                            style="width: 300px; background-color: #660066;"><span class="barlabel" style="font-size: 18px;">Silver Comet Side Trail</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar bg-primary" style="width: 300px;"><span class="barlabel"><big>8</big> miles -Mixed Use</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                        <div class="barContainer" style="width: 300px;">
+                            <div class="bar" style="background-color:#009933; width: 0px;"><span class="barlabel"></span></div>
+                            <div class="bar" style="background-color:#0033cc; width: 300px;"><span class="barlabel">&#9632;8</span></div>
+                            <div class="bar" style="background-color:#000000; width: 0px;"><span class="barlabel"></span></div>
+                        </div>
+                    </div>
+                    
+            <div style="width: 300px;">  
+            <br>
+              <p>This dirt trail parallels the paved Silver Comet trail from the Hiram trailhead at MM 14.5 to MM 23.</p>
+              <address>Seaboard Ave, Hiram, GA 30141</address>
+              <p>Sunrise until sunset unless posted otherwise.  Watch for blue blazes with white chevrons.</p>
+
+            <br>
+            
+            </div>
+           
+          <div class="colWrapper">
+            <div class="col-xs-6 text-center">
+                <div class="btn-group-vertical">
+                    <a class="btn btn-info" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Silver Comet Side Trail georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+                    <a class="btn btn-info" target = "_blank" href="https://www.youtube.com/results?search_query=Silver Comet Side Trail georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+                      <a class="btn btn-info" target = "_blank" href="http://www.singletracks.com/bike-trails/silver-comet-mtb-side-trails.html"><i class="fa fa-bicycle"></i> Singletracks</a>
+                </div>
+
+            </div>        
+            <div class="col-xs-6 text-center">
+                  <div class="btn-group-vertical">
+                      <a class="btn btn-info" target="_blank" href="http://imba-westga.org/locations-of-interest/detail/4/1/silver-comet-sidetrail-hiram-trail-head"><i class="fa fa-star"></i> Website</a>
+                      <a class="btn btn-info" target="_blank" href="http://pathfoundation.org/trails/silver-comet/"><i class="fa fa-compass"></i> Trail Map</a>
+                      <a class="btn btn-info" target= "_blank" href="http://maps.google.com/maps?daddr=Seaboard Ave, Hiram, GA 30141"><i class="fa fa-map-marker"></i> Directions</a>
+                  </div>
+            </div>
+            </div>
+            <!--
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://pathfoundation.org/trails/silver-comet/"><i class="fa fa-compass"></i> Trail Map</a>
+        <a class="btn btn-default btn-sm" target= "_blank" href="http://maps.google.com/maps?daddr=Seaboard Ave, Hiram, GA 30141"><i class="fa fa-map-marker"></i> Directions</a>
+    </div>
+       <p></p>
+   <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://imba-westga.org/locations-of-interest/detail/4/1/silver-comet-sidetrail-hiram-trail-head"><i class="fa fa-star"></i> Website</a>
+       <a class="btn btn-default btn-sm" target = "_blank" href="http://www.singletracks.com/bike-trails/silver-comet-mtb-side-trails.html"><i class="fa fa-bicycle"></i> Singletracks</a>  
+    </div>
+    <p></p>
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Silver Comet Side Trail georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+        <a class="btn btn-default btn-sm" target = "_blank" href="https://www.youtube.com/results?search_query=Silver Comet Side Trail georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+   </div>
+-->
+
+</div>
+<div class="hidden-xs col-sm-6">
+
+ <a target="_blank" href="http://maps.google.com/maps?daddr=Seaboard Ave, Hiram, GA 30141"><img border="0" src="https://maps.googleapis.com/maps/api/staticmap?maptype=terrain&center=Seaboard Ave, Hiram, GA 30141&markers=Seaboard Ave, Hiram, GA 30141&zoom=13&size=400x400" alt="Silver Comet Side Trail"/></a>
+</div>
+</div>
+</div>
+
+
+
+      </script>
+  
+      <script type=text id='542dee91cbba430000000003'>
+       
+<div style="margin-left: 10px; margin-right: 10px; margin-top: 10px;">
+<div class="row">
+<div class="col-xs-12 col-sm-6">
+      <!-- <h4 class="bg-primary" style="padding: 3px; border-radius: 3px;">
+          &nbsp;Stinky Trail
+      </h4> -->
+           
+                   <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar " 
+                            style="width: 300px; background-color: #336600;"><span class="barlabel" style="font-size: 18px;">Stinky Trail</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar bg-primary" style="width: 300px;"><span class="barlabel"><big>15</big> miles -Dedicated</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                        <div class="barContainer" style="width: 300px;">
+                            <div class="bar" style="background-color:#009933; width: 60px;"><span class="barlabel">&#9679;3</span></div>
+                            <div class="bar" style="background-color:#0033cc; width: 160px;"><span class="barlabel">&#9632;8</span></div>
+                            <div class="bar" style="background-color:#000000; width: 80px;"><span class="barlabel">&diams;4</span></div>
+                        </div>
+                    </div>
+                    
+            <div style="width: 300px;">  
+            <br>
+              <p>15 miles of single track in Peachtree City</p>
+              <address>955 Crosstown Drive, Peachtree City, GA 30269</address>
+              <p>Sunrise until sunset unless posted otherwise. See trail map for parking location and directions.</p>
+
+            <br>
+            
+            </div>
+           
+          <div class="colWrapper">
+            <div class="col-xs-6 text-center">
+                <div class="btn-group-vertical">
+                    <a class="btn btn-info" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Stinky Trail georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+                    <a class="btn btn-info" target = "_blank" href="https://www.youtube.com/results?search_query=Stinky Trail georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+                      <a class="btn btn-info" target = "_blank" href="http://www.singletracks.com/bike-trails/wendys-hwy-74-parallel.html"><i class="fa fa-bicycle"></i> Singletracks</a>
+                </div>
+
+            </div>        
+            <div class="col-xs-6 text-center">
+                  <div class="btn-group-vertical">
+                      <a class="btn btn-info" target="_blank" href="http://www.southsidecycling.com/mtb/mtb.php"><i class="fa fa-star"></i> Website</a>
+                      <a class="btn btn-info" target="_blank" href="http://southsidecycling.com/documents/Maps%20and%20Cue%20Sheets/Stinky09_2013.pdf"><i class="fa fa-compass"></i> Trail Map</a>
+                      <a class="btn btn-info" target= "_blank" href="http://maps.google.com/maps?daddr=955 Crosstown Drive, Peachtree City, GA 30269"><i class="fa fa-map-marker"></i> Directions</a>
+                  </div>
+            </div>
+            </div>
+            <!--
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://southsidecycling.com/documents/Maps%20and%20Cue%20Sheets/Stinky09_2013.pdf"><i class="fa fa-compass"></i> Trail Map</a>
+        <a class="btn btn-default btn-sm" target= "_blank" href="http://maps.google.com/maps?daddr=955 Crosstown Drive, Peachtree City, GA 30269"><i class="fa fa-map-marker"></i> Directions</a>
+    </div>
+       <p></p>
+   <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://www.southsidecycling.com/mtb/mtb.php"><i class="fa fa-star"></i> Website</a>
+       <a class="btn btn-default btn-sm" target = "_blank" href="http://www.singletracks.com/bike-trails/wendys-hwy-74-parallel.html"><i class="fa fa-bicycle"></i> Singletracks</a>  
+    </div>
+    <p></p>
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Stinky Trail georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+        <a class="btn btn-default btn-sm" target = "_blank" href="https://www.youtube.com/results?search_query=Stinky Trail georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+   </div>
+-->
+
+</div>
+<div class="hidden-xs col-sm-6">
+
+ <a target="_blank" href="http://maps.google.com/maps?daddr=955 Crosstown Drive, Peachtree City, GA 30269"><img border="0" src="https://maps.googleapis.com/maps/api/staticmap?maptype=terrain&center=955 Crosstown Drive, Peachtree City, GA 30269&markers=955 Crosstown Drive, Peachtree City, GA 30269&zoom=13&size=400x400" alt="Stinky Trail"/></a>
+</div>
+</div>
+</div>
+
+
+
+      </script>
+  
+      <script type=text id='5425ce82edc6f122d7000004'>
+       
+<div style="margin-left: 10px; margin-right: 10px; margin-top: 10px;">
+<div class="row">
+<div class="col-xs-12 col-sm-6">
+      <!-- <h4 class="bg-primary" style="padding: 3px; border-radius: 3px;">
+          &nbsp;Tribble Mill Park
+      </h4> -->
+           
+                   <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar " 
+                            style="width: 300px; background-color: #006633;"><span class="barlabel" style="font-size: 18px;">Tribble Mill Park</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar bg-primary" style="width: 300px;"><span class="barlabel"><big>12</big> miles -Mixed Use</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                        <div class="barContainer" style="width: 300px;">
+                            <div class="bar" style="background-color:#009933; width: 0px;"><span class="barlabel"></span></div>
+                            <div class="bar" style="background-color:#0033cc; width: 300px;"><span class="barlabel">&#9632;12</span></div>
+                            <div class="bar" style="background-color:#000000; width: 0px;"><span class="barlabel"></span></div>
+                        </div>
+                    </div>
+                    
+            <div style="width: 300px;">  
+            <br>
+              <p>Trails surrounding Tribble Mill.  Mysterious signage and no maps.</p>
+              <address>2125 Tribble Mill Parkway, Lawrenceville, GA 30045</address>
+              <p>Sunrise until sunset unless posted otherwise</p>
+
+            <br>
+            
+            </div>
+           
+          <div class="colWrapper">
+            <div class="col-xs-6 text-center">
+                <div class="btn-group-vertical">
+                    <a class="btn btn-info" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Tribble Mill Park georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+                    <a class="btn btn-info" target = "_blank" href="https://www.youtube.com/results?search_query=Tribble Mill Park georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+                      <a class="btn btn-info" target = "_blank" href="http://www.singletracks.com/bike-trails/tribble-mill-park.html"><i class="fa fa-bicycle"></i> Singletracks</a>
+                </div>
+
+            </div>        
+            <div class="col-xs-6 text-center">
+                  <div class="btn-group-vertical">
+                      <a class="btn btn-info" target="_blank" href="http://www.sorbagatr.org/trails/trail-tribble/"><i class="fa fa-star"></i> Website</a>
+                      <a class="btn btn-info" target="_blank" href="http://www.sorbagatr.org/wp-content/uploads/2009/11/TerryLinkRaceTribbleMill.jpg"><i class="fa fa-compass"></i> Trail Map</a>
+                      <a class="btn btn-info" target= "_blank" href="http://maps.google.com/maps?daddr=2125 Tribble Mill Parkway, Lawrenceville, GA 30045"><i class="fa fa-map-marker"></i> Directions</a>
+                  </div>
+            </div>
+            </div>
+            <!--
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://www.sorbagatr.org/wp-content/uploads/2009/11/TerryLinkRaceTribbleMill.jpg"><i class="fa fa-compass"></i> Trail Map</a>
+        <a class="btn btn-default btn-sm" target= "_blank" href="http://maps.google.com/maps?daddr=2125 Tribble Mill Parkway, Lawrenceville, GA 30045"><i class="fa fa-map-marker"></i> Directions</a>
+    </div>
+       <p></p>
+   <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="http://www.sorbagatr.org/trails/trail-tribble/"><i class="fa fa-star"></i> Website</a>
+       <a class="btn btn-default btn-sm" target = "_blank" href="http://www.singletracks.com/bike-trails/tribble-mill-park.html"><i class="fa fa-bicycle"></i> Singletracks</a>  
+    </div>
+    <p></p>
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Tribble Mill Park georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+        <a class="btn btn-default btn-sm" target = "_blank" href="https://www.youtube.com/results?search_query=Tribble Mill Park georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+   </div>
+-->
+
+</div>
+<div class="hidden-xs col-sm-6">
+
+ <a target="_blank" href="http://maps.google.com/maps?daddr=2125 Tribble Mill Parkway, Lawrenceville, GA 30045"><img border="0" src="https://maps.googleapis.com/maps/api/staticmap?maptype=terrain&center=2125 Tribble Mill Parkway, Lawrenceville, GA 30045&markers=2125 Tribble Mill Parkway, Lawrenceville, GA 30045&zoom=13&size=400x400" alt="Tribble Mill Park"/></a>
+</div>
+</div>
+</div>
+
+
+
+      </script>
+  
+      <script type=text id='5425ce5eedc6f122d7000003'>
+       
+<div style="margin-left: 10px; margin-right: 10px; margin-top: 10px;">
+<div class="row">
+<div class="col-xs-12 col-sm-6">
+      <!-- <h4 class="bg-primary" style="padding: 3px; border-radius: 3px;">
+          &nbsp;Yellow River Park
+      </h4> -->
+           
+                   <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar " 
+                            style="width: 300px; background-color: #666600;"><span class="barlabel" style="font-size: 18px;">Yellow River Park</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                       <div class="barContainer">
+                            <div class="bar bg-primary" style="width: 300px;"><span class="barlabel"><big>12</big> miles -Mixed Use</span></div>
+                        </div>
+                    </div>
+                    <div class="colWrapper">
+                        <div class="barContainer" style="width: 300px;">
+                            <div class="bar" style="background-color:#009933; width: 150px;"><span class="barlabel">&#9679;6</span></div>
+                            <div class="bar" style="background-color:#0033cc; width: 150px;"><span class="barlabel">&#9632;6</span></div>
+                            <div class="bar" style="background-color:#000000; width: 0px;"><span class="barlabel"></span></div>
+                        </div>
+                    </div>
+                    
+            <div style="width: 300px;">  
+            <br>
+              <p>Getting lost is half the fun.</p>
+              <address>3232 Juhan Road, Stone Mountain, GA 30087</address>
+              <p>Sunrise until sunset unless posted otherwise.</p>
+
+            <br>
+            
+            </div>
+           
+          <div class="colWrapper">
+            <div class="col-xs-6 text-center">
+                <div class="btn-group-vertical">
+                    <a class="btn btn-info" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Yellow River Park georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+                    <a class="btn btn-info" target = "_blank" href="https://www.youtube.com/results?search_query=Yellow River Park georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+                      <a class="btn btn-info" target = "_blank" href="http://www.singletracks.com/bike-trails/yellow-river.html"><i class="fa fa-bicycle"></i> Singletracks</a>
+                </div>
+
+            </div>        
+            <div class="col-xs-6 text-center">
+                  <div class="btn-group-vertical">
+                      <a class="btn btn-info" target="_blank" href="https://www.gwinnettcounty.com/portal/gwinnett/Departments/CommunityServices/ParksandRecreation/OurParksandFacilities/GuidetoYourParks/YellowRiverPark"><i class="fa fa-star"></i> Website</a>
+                      <a class="btn btn-info" target="_blank" href="https://www.gwinnettcounty.com/static/departments/parks_rec/pdf/yellow_river_trail_map.pdf"><i class="fa fa-compass"></i> Trail Map</a>
+                      <a class="btn btn-info" target= "_blank" href="http://maps.google.com/maps?daddr=3232 Juhan Road, Stone Mountain, GA 30087"><i class="fa fa-map-marker"></i> Directions</a>
+                  </div>
+            </div>
+            </div>
+            <!--
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="https://www.gwinnettcounty.com/static/departments/parks_rec/pdf/yellow_river_trail_map.pdf"><i class="fa fa-compass"></i> Trail Map</a>
+        <a class="btn btn-default btn-sm" target= "_blank" href="http://maps.google.com/maps?daddr=3232 Juhan Road, Stone Mountain, GA 30087"><i class="fa fa-map-marker"></i> Directions</a>
+    </div>
+       <p></p>
+   <div class="btn-group">
+        <a class="btn btn-default btn-sm" target="_blank" href="https://www.gwinnettcounty.com/portal/gwinnett/Departments/CommunityServices/ParksandRecreation/OurParksandFacilities/GuidetoYourParks/YellowRiverPark"><i class="fa fa-star"></i> Website</a>
+       <a class="btn btn-default btn-sm" target = "_blank" href="http://www.singletracks.com/bike-trails/yellow-river.html"><i class="fa fa-bicycle"></i> Singletracks</a>  
+    </div>
+    <p></p>
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm" target= "_blank" href="https://www.google.com/search?site=&tbm=isch&q=Yellow River Park georgia mountain bike"><i class="fa fa-picture-o"></i> Pictures</a>
+        <a class="btn btn-default btn-sm" target = "_blank" href="https://www.youtube.com/results?search_query=Yellow River Park georgia mountain bike"><i class="fa fa-video-camera"></i> Videos</a>
+   </div>
+-->
+
+</div>
+<div class="hidden-xs col-sm-6">
+
+ <a target="_blank" href="http://maps.google.com/maps?daddr=3232 Juhan Road, Stone Mountain, GA 30087"><img border="0" src="https://maps.googleapis.com/maps/api/staticmap?maptype=terrain&center=3232 Juhan Road, Stone Mountain, GA 30087&markers=3232 Juhan Road, Stone Mountain, GA 30087&zoom=13&size=400x400" alt="Yellow River Park"/></a>
+</div>
+</div>
+</div>
+
+
+
+      </script>
+  
   		<script src="js/classie.js"></script>
 		<script src="js/demo1.js"></script>
             <script>
